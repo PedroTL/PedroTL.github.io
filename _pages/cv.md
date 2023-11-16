@@ -9,6 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-[English CV](https://google.com)
+<embed src="{{ site.baseurl }}/files/Resume.pdf" width="600" height="700" type='application/pdf'>
 
 [Portuguese CV]("https://PedroTL.github.io/files/Curr%C3%ADculo.pdf")
