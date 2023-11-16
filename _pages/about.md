@@ -64,4 +64,4 @@ One of the collaborators of the Academic Week workshop. The aim is to share the 
 - [Award:](https://www.puc-campinas.edu.br/puc-campinas-e-cbyk-anunciam-vencedores-de-torneio-de-simulacao-de-negocios/) Won 3th prize for the business simulation CESIM competition organized by University  of PUC-Campinas
 
 ## Publications
-1. OLIVEIRA, P. R. S. ; ALONSO, R. ; LUCAS, J. P. T. T. ; MARTINS, W. . Geocodificação dos Endereços do CadÚnico de Campinas. 2023. (Nota Metodológica).
+1. OLIVEIRA, P. R. S. ; ALONSO, R. ; **LUCAS, J. P. T. T.** ; MARTINS, W. . Geocodificação dos Endereços do CadÚnico de Campinas. 2023. (Nota Metodológica).
