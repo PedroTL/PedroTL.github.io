@@ -9,8 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
-[English CV]("https://github.com/PedroTL/PedroTL.github.io/blob/master/files/Resume.pdf")
-[Portuguese CV]("https://github.com/PedroTL/PedroTL.github.io/blob/master/files/Curr%C3%ADculo.pdf")
+[English CV]("https://PedroTL.github.io/files/Resume.pdf")
+
+[Portuguese CV]("https://PedroTL.github.io/files/Curr%C3%ADculo.pdf")
 
 <!-- Education
 ======
