@@ -9,6 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-[English CV]("https://PedroTL.github.io/files/Resume.pdf")
+[English CV]("https://google.com")
 
 [Portuguese CV]("https://PedroTL.github.io/files/Curr%C3%ADculo.pdf")
