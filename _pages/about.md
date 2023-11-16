@@ -41,7 +41,7 @@ Undergraduate student in Economics at Pontifical Catholic University of Campinas
 Developed in collaboration with FEAC analysts and researchers from Observatório PUC-Campinas, a unique methodology was established to geocode over 70,000 families registered in the Cadastro Único in Campinas. This process served as the initial phase to construct a social vulnerability index for the municipality. The outcomes revealed areas with a dense concentration of program registrations, offering valuable insights for third-sector organizations and policymakers.
 
 
-<img src="/assets/1-Map-Geocoding.jpeg" alt="1-Map-Geocoding" />
+<img src="/images/1-Map-Geocoding.jpeg" alt="1-Map-Geocoding" />
 
 ### Monthly Foreing Trade Report of The Metropolitan Region of Campinas
 [Publication](https://observatorio.puc-campinas.edu.br/informativo-mensal-balanca-comercial-da-regiao-metropolitana-de-campinas-volume-5-n-06-2022/)
