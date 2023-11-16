@@ -9,7 +9,6 @@ redirect_from:
 ---
 
 ## About Me
-======
 Undergraduate student in Economics at Pontifical Catholic University of Campinas (PUC-CAMPINAS). Throughout my academic journey, I actively participated in an extension program at the PUC-CAMPINAS Observatory, serving as a fellow in two significant projects. Firstly, I contributed to the Productive Structure and Socioeconomic Development project, where I conducted studies on the foreign trade of the Metropolitan Region of Campinas (RMC). Additionally, I collaborated on the Socio-Territorial Diagnosis project in partnership with the FEAC Foundation, analyzing microdata from the Unified Registry (Cadastro Único) and aiding in the development of a georeferencing methodology for registered families. In both projects, I conducted research involving regional economic indicators with the primary aim of providing support to key sectors of the economy.
 
 #### Technical Skills: R, SQL, Economics, Spatial Econometrics, ESDA
