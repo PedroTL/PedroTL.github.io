@@ -15,11 +15,8 @@ main:
 #  - title: "Blog Posts"
 #    url: /year-archive/
     
-# - title: "CV"
-#    url: /cv/
-
-  - title: "CV"
-      url: /files/Resume.pdf
+ - title: "CV"
+    url: /files/Resume.pdf
     
 #  - title: "Guide"
 #    url: /markdown/
