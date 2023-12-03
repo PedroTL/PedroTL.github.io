@@ -9,30 +9,32 @@ redirect_from:
 ---
 
 ## About Me
-Undergraduate student in Economics at the Pontifical Catholic University of Campinas (PUC-Campinas, 2023). I actively engaged in an extension program at the PUC-Campinas Observatory, participating as a fellow in two significant projects. Primarily, I contributed to the Productive Structure and Socioeconomic Development project, conducting studies on the foreign trade of the Metropolitan Region of Campinas (RMC). Additionally, I collaborated on the Socio-Territorial Diagnosis project in partnership with the FEAC Foundation, analyzing microdata from the Unified Registry (Cadastro Único) and contributing to the development of a georeferencing methodology for registered families. In both projects, my research revolved around regional economic indicators aimed at providing support to key sectors of the economy.
+With almost two years of hands-on experience as a research assistant at the Pontifical Catholic University of Campinas Observatory and teaching assistant in econometrics coursework. I actively work in two prominent extension programs. The first, focused on Productive Structure and Socioeconomic Development, conducting comprehensive studies on foreign trade within the Metropolitan Region of Campinas (MRC). The second, in collaboration with the FEAC foundation, involved conducting a Social Territory Diagnosis. This initiative entailed geocoding data obtained from the Unify Registry (Cadastro Único), a federal program that registers families in social vulnerability. Both projects offered valuable insights for industrial and third sector, playing a crucial role in the decision-making processes within the public sector.
 
-#### Technical Skills: R, SQL, Economics, Spatial Econometrics, ESDA
+#### Technical Skills: Statistics | Econometrics | Spatial Econometrics | Exploratory Spatial Data Analysis (ESDA) | Regional Economics | Development Economics Research | Scientific Writing | GIS Fundamentals | R Language | SQL | Data Analysis | Fluent Portuguese and Advanced English
 
 ## Education
 - Pontifícia Universidade Católica de Campinas (December 2023)
 
 ## Work Experience
-**Extension fellow, Data Analisys @ Observatório PUC-Campinas (_March 2023 - Present_)**
-- Worked on the design and methodology for geocoding over 70,000 families enrolled in the Federal Single Registry Program in Campinas using R, that efficiently selects the best coordinates based on unreliable addresses. This effort resulted in a better understanding of areas with social vulnerabilities through spatial visualization, offering valuable insights to policymakers and third-sector organizations.
-- Designed and implemented a reproducible workflow in R and RMarkdown for use with the Single Registry data. The primary goal was to clean and prepare the data, which consists of over 170 variables, making it easier for other municipalities to conduct a better geocodingand regional studies on social vulnerability.
+**Research Assistant @ Observatório PUC-Campinas (_March 2023 - Present_)**
+- Worked on the design and methodology for geocoding over 70,000 families enrolled in the Federal Single Registry Program in Campinas u using R, that efficiently selects the best coordinates based on unreliable addresses. This effort resulted in a better understanding of areas with social vulnerabilities through spatial visualization, offering valuable insights to policymakers and third-sector organizations.
+- Designed and implemented a reproducible workflow in R for use with the Single Registry data. The primary goal was to clean and prepare the data, which consists of over 170 variables, making it easier for other municipalities to conduct a better geocoding and regional studies on social vulnerability.
 - Collaborated with analysts from the FEAC Foundation to conduct a methodological study that encompasses the results and methods employed in the geocoding process of the Single Registry in Campinas.
-- Maintained a consistent workflow with continuous commits, code reviews, and data wrangling to extract the insights requested by the leading researchers.
+- Maintained a consistent workflow with continuous commits, code reviews, and data wrangling to extract insights requested by the leading researcher.
+
 
 **Teaching Assistant @ Pontifícia Universidade Católica de Campinas (_February 2023 - Present_)**
-- Developed instructional YouTube tutorials to help students graps course content and provided support with the R language.
-- Design exercises, quizzes and answers keys for students, while being responsible for grading assignments.
+- Developed instructional YouTube tutorials to help students grasp course content and provided support with the R language.
+- Design exercises, quizzes, and answers keys for students, while being responsible for grading assignments.
 - Conduct continuous online tutoring sections during the semester to assist students with course-related topics.
 
-**Extension fellow @ Pontifícia Universidade Católica de Campinas (_February 2022 - December 2022_)**
-- Responsible for collecting, extracting and validating data from international trade for the Metropolitan Region of Campinas using R.
-- Developed an automated RMarkdown workflow for generating monthly reports on the International Trade of Metropolitan Region of Campinas (MRC), reducing the time required for releasing information to local media and city hall.
+**Research Assistant @ Pontifícia Universidade Católica de Campinas (_February 2022 - December 2022_)**
+- Responsible for collecting, extracting, and validating data from international trade for the Metropolitan Region of Campinas in R Language.
+- Developed an automated RMarkdown workflow for running monthly reports on the International Trade of Metropolitan Region of Campinas (MRC), reducing the time required for releasing information to local media and public institutions.
 - Conducted methodological studies involving statistical and economics analysis on topics with regional significance, aiming to provide better insights and understanding to policymakers, third-sector organizations, and the industry sector.
-- Collaborated on data wrangling tasks, addressing specific requests from others research professors. 
+- Collaborated on data wrangling tasks, addressing specific requests by the leading researcher
+ 
 
 ## Projects
 ### The Geocoding Methodology Process for Cadastro Único Families in Campinas-SP
