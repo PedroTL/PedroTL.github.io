@@ -14,7 +14,7 @@ With almost two years of hands-on experience as a research assistant at the Pont
 #### Technical Skills: Statistics | Econometrics | Spatial Econometrics | Exploratory Spatial Data Analysis (ESDA) | Regional Economics | Development Economics Research | Scientific Writing | GIS Fundamentals | R Language | SQL | Data Analysis | Fluent Portuguese and Advanced English
 
 ## Education
-- Pontifícia Universidade Católica de Campinas (December 2023)
+- Pontifical Catholic University of Campinas (December 2023)
 
 ## Work Experience
 **Research Assistant @ Observatório PUC-Campinas (_March 2023 - Present_)**
