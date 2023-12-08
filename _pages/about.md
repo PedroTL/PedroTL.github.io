@@ -46,7 +46,8 @@ I have almost two years of hands-on experience as a research assistant at the Po
 ## Projects
 
 ### The Geocoding Methodology Process for the Cadastro Único Families in Campinas-SP
-[Publication](https://feac.org.br/wp-content/uploads/2023/10/Geocodificacao_FEAC.pdf?portfolioCats=3105#new_tab)
+[Full Study](https://feac.org.br/wp-content/uploads/2023/10/Geocodificacao_FEAC.pdf?portfolioCats=3105#new_tab)
+[Portifolio Publication](https://pedrotl.github.io/portfolio/portfolio-1/)
 
 Developed in collaboration with FEAC foundation analysts and researchers from the Pontifical Catholic University of Campinas Observatory, a unique methodology was established to geocode over 70,000 families registered in the Cadastro Único in Campinas. This process served as the initial phase to construct a social vulnerability index for the municipality. The outcomes revealed areas with a dense concentration of program registrations, offering valuable insights about social economic vulnerability for third-sector organizations and policymakers.
 

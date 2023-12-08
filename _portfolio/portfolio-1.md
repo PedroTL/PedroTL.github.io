@@ -1,6 +1,6 @@
 ---
 title: "Geocoding Families of the Single Registry in Campinas-SP"
-excerpt: "Geocoding methodological process for the families in the Unify Single of Campinas-SP <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
+excerpt: "Geocoding methodological process for the families in the Single of Campinas-SP <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
 collection: portfolio
 ---
 
@@ -33,25 +33,25 @@ When no service meets the Zip Code criteria, the methodology goes directly to th
 
 <img src="/images/Chart_one.png" alt="Chart_one" />
 
-After the geocoding of the NDE data set, the coordinates will be donated to the Single Registry data set, which is linked by Zip Code, and contains the families. One problem was discovered in the Single Registry data set related to the Zip Code that was being assigned to families, but it did not correspond to the address that was input to them. This was later called a "generic Zip Code", because the information was not related to the original address. This most likely occurred because many families lived in areas that were occupied, so there was no official address by the Correio, meaning that to fill in the registry, a generic Zip Code was given.
+After the geocoding of the NDA data set, the coordinates will be donated to the Single Registry data set, which is linked by Zip Code, and contains the families. One problem was discovered in the Single Registry data set related to the Zip Code that was being assigned to families, but it did not correspond to the address that was input to them. This was later called a "generic Zip Code", because the information was not related to the original address. This most likely occurred because many families lived in areas that were occupied, so there was no official address by the Correio, meaning that to fill in the registry, a generic Zip Code was given.
 
 For these families, a new Geocoding was needed, using only the information available in the Single Registry data set, which is non-standard and has two levels of information missing: the Zip Code and the house number. The workflow basically divided the Single Registry data set in two, the first with an almost standard address, meaning that families were able to receive the donation coordinate from the NDA by the Zip Code. The other was the family with a generic Zip Code, which needed a new round of geocoding because the linkage with the Zip Code was not possible. 
 
 The identification of these families was made based on the frequency of Zip Code in the Single Registry data set. Those Zip Code with more than 200 frequencies were geocoded in the rank-one service of the MDC. The goal was to compare the Zip Code assigned to those in the input addresses to the output given. If they were the same, no point would be assigned; if not, a point would be counted, and the final frequency would give a view if the input addresses with the Zip Code returned a different Zip Code.
 
-The process to pick the final coordinates for those addresses follows the same logic as the NDE geocoding. The main difference is that there is no comparison between the Zip Code inputs because they are not linked to the address. To resolve this issue, the confirmation procedure involved locating the output Zip Code, providing the input address, and examining whether the output Zip Code was included in the NDE data set. This worked as the first quality step. All the others follow the same principle as before, looking at the distance, picking the two closest, and tie braking by the MDC global rank. The finals step can be viewed in the flow chart bellow.
+The process to pick the final coordinates for those addresses follows the same logic as the NDA geocoding. The main difference is that there is no comparison between the Zip Code inputs because they are not linked to the address. To resolve this issue, the confirmation procedure involved locating the output Zip Code, providing the input address, and examining whether the output Zip Code was included in the NDA data set. This worked as the first quality step. All the others follow the same principle as before, looking at the distance, picking the two closest, and tie braking by the MDC global rank. The finals step can be viewed in the flow chart bellow.
 
 <img src="/images/Chart_Two.png" alt="Chart_Two" />
 
 ## Results
 
-The results for the NDE geocoding with 11.126 addresses show that the MDC global rank was given in the following order: Arcgis, Google and Bing. The confirmation of Zip Code given in the input and returned to the output was for at least one service, representing 87,74% of the total addresses. 
+The results for the NDA geocoding with 11.126 addresses show that the MDC global rank was given in the following order: Arcgis, Google and Bing. The confirmation of Zip Code given in the input and returned to the output was for at least one service, representing 87,74% of the total addresses. 
 
-About the quality performance, Arcgis is the best, finding the Zip Code confirmation in 73,56% of the total input addresses, followed by Google with 53,94% and similarly Bing with 52.55%. The final selection of coordinates for the NDE address was 8691 by Arcgis, 2062 by Google, and 368 in Bing.
+About the quality performance, Arcgis is the best, finding the Zip Code confirmation in 73,56% of the total input addresses, followed by Google with 53,94% and similarly Bing with 52.55%. The final selection of coordinates for the NDA address was 8691 by Arcgis, 2062 by Google, and 368 in Bing.
 
-A total of 6521 addresses were detected as being related to generic Zip Codes. The results show that 6231 addresses returned at least one output with a reference Zip Code found in the de NDE, even when the Zip Code was not used as input for this process, representing 95,49% of the total.
+A total of 6521 addresses were detected as being related to generic Zip Codes. The results show that 6231 addresses returned at least one output with a reference Zip Code found in the de NDA, even when the Zip Code was not used as input for this process, representing 95,49% of the total.
 
-The quality performance in this step shows that Bing was more accurate with non-standard addresses, finding a reference Zip Code in the NDE for 87,66% of the total addresses, followed by Arcgis with 60,15% and Google with 48,91%.
+The quality performance in this step shows that Bing was more accurate with non-standard addresses, finding a reference Zip Code in the NDA for 87,66% of the total addresses, followed by Arcgis with 60,15% and Google with 48,91%.
 
 Finally, 71.452 of the 71.466 families managed to be geocoded. The map below shows the Kernel Density for the municipality, mapping the areas with a high frequency of registry families. The results entailed the segregation of the south area of Campinas-SP and the division made by Highway Anhanguera.
 
