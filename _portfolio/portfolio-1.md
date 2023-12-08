@@ -1,6 +1,6 @@
 ---
-title: "Geocoding Families of the Unify Registry in Campinas-SP"
-excerpt: "Geocoding methodological process for the families in the Unify Registry of Campinas-SP <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
+title: "Geocoding Families of the Single Registry in Campinas-SP"
+excerpt: "Geocoding methodological process for the families in the Unify Single of Campinas-SP <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
 collection: portfolio
 ---
 
@@ -45,3 +45,14 @@ The process to pick the final coordinates for those addresses follows the same l
 
 ## Results
 
+The results for the NDE geocoding with 11.126 addresses show that the MDC global rank was given in the following order: Arcgis, Google and Bing. The confirmation of Zip Code given in the input and returned to the output was for at least one service, representing 87,74% of the total addresses. 
+
+About the quality performance, Arcgis is the best, finding the Zip Code confirmation in 73,56% of the total input addresses, followed by Google with 53,94% and similarly Bing with 52.55%. The final selection of coordinates for the NDE address was 8691 by Arcgis, 2062 by Google, and 368 in Bing.
+
+A total of 6521 addresses were detected as being related to generic Zip Codes. The results show that 6231 addresses returned at least one output with a reference Zip Code found in the de NDE, even when the Zip Code was not used as input for this process, representing 95,49% of the total.
+
+The quality performance in this step shows that Bing was more accurate with non-standard addresses, finding a reference Zip Code in the NDE for 87,66% of the total addresses, followed by Arcgis with 60,15% and Google with 48,91%.
+
+Finally, 71.452 of the 71.466 families managed to be geocoded. The map below shows the Kernel Density for the municipality, mapping the areas with a high frequency of registry families. The results entailed the segregation of the south area of Campinas-SP and the division made by Highway Anhanguera.
+
+<img src="/images/1-Map-Geocoding.jpeg" alt="1-Map-Geocoding" />
