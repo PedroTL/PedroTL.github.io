@@ -33,7 +33,8 @@ I have almost two years of hands-on experience as a research assistant at the Po
 - I worked on the design and methodology for geocoding over 70,000 families enrolled in the Federal Single Registry Program in Campinas using R, which efficiently selects the best coordinates based on unreliable addresses. This effort resulted in a better understanding of areas with social vulnerabilities through spatial visualization, offering valuable insights to policymakers and third-sector organizations.
 - Designed and implemented a reproducible workflow in R and RMarkdown for use with the Single Registry data. The primary goal was to clean and prepare the data, which consists of over 170 variables, making it easier for other municipalities to conduct better geocoding and regional studies on social vulnerability.
 - Collaborated with analysts from the FEAC Foundation to conduct a methodological study that encompasses the results and methods employed in the geocoding process of the Single Registry in Campinas.
-- Maintained a consistent workflow with continuous commits, code reviews, and data wrangling to extract the insights requested by the leading researchers.
+- Maintained a consistent workflow with continuous commits, code reviews, and data wrangling to extract insights requested by the leading researcher.
+
 
 **Teaching Assistant @ Pontifical Catholic University of Campinas (_February 2023 - Present_)**
 
