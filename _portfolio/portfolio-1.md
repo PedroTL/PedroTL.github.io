@@ -31,7 +31,7 @@ In the case of only two services providing the output with the same Zip Code as 
 
 When no service meets the Zip Code criteria, the methodology goes directly to the compared distances and the MDC tie brake. When there are three outputs, the distance is looked at, and then the tiebreaker happens. If there are just two services, the tiebreaker will happen directly. In the case of only one service, this is considered final. Every step can be viewed in the flow chart bellow.
 
-[]
+<img src="/images/Chart_one.png" alt="Chart_one" />
 
 After the geocoding of the NDE data set, the coordinates will be donated to the Single Registry data set, which is linked by Zip Code, and contains the families. One problem was discovered in the Single Registry data set related to the Zip Code that was being assigned to families, but it did not correspond to the address that was input to them. This was later called a "generic Zip Code", because the information was not related to the original address. This most likely occurred because many families lived in areas that were occupied, so there was no official address by the Correio, meaning that to fill in the registry, a generic Zip Code was given.
 
@@ -41,7 +41,7 @@ The identification of these families was made based on the frequency of Zip Code
 
 The process to pick the final coordinates for those addresses follows the same logic as the NDE geocoding. The main difference is that there is no comparison between the Zip Code inputs because they are not linked to the address. To resolve this issue, the confirmation procedure involved locating the output Zip Code, providing the input address, and examining whether the output Zip Code was included in the NDE data set. This worked as the first quality step. All the others follow the same principle as before, looking at the distance, picking the two closest, and tie braking by the MDC global rank. The finals step can be viewed in the flow chart bellow.
 
-[]
+<img src="/images/Chart_Two.png" alt="Chart_Two" />
 
 ## Results
 
