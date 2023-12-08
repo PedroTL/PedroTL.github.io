@@ -10,7 +10,7 @@ redirect_from:
 
 ## About Me
 
-I have almost two years of hands-on experience as a research assistant at the Pontifical Catholic University of Campinas Observatory and as a teaching assistant in econometrics coursework, with the goal of joining a master degree program in economics by 2024. I actively work on two prominent extension programs. The first focused on Productive Structure and Socioeconomic Development, conducting comprehensive studies on foreign trade within the Metropolitan Region of Campinas (MRC). The second, in collaboration with the FEAC foundation, involved conducting a Social Territory Diagnosis. This initiative entailed geocoding data obtained from the Unify Registry (Cadastro Único), a federal program that registers families in social vulnerability. Both projects offered valuable insights for the industrial and third sectors, as well as playing a crucial role in the decision-making processes within the public sector.
+I have almost two years of hands-on experience as a research assistant at the Pontifical Catholic University of Campinas Observatory and as a teaching assistant in econometrics coursework, with the goal of joining a master degree program in economics by 2024. I actively work on two prominent extension programs. The first focused on Productive Structure and Socioeconomic Development, conducting comprehensive studies on foreign trade within the Metropolitan Region of Campinas (MRC). The second, in collaboration with the FEAC foundation, involved conducting a Social Territory Diagnosis. This initiative entailed geocoding data obtained from the Single Registry (Cadastro Único), a federal program that registers families in social vulnerability. Both projects offered valuable insights for the industrial and third sectors, as well as playing a crucial role in the decision-making processes within the public sector.
 
 
 #### Technical Skills: Statistics | Econometrics | Spatial Econometrics | Exploratory Spatial Data Analysis (ESDA) | Regional Economics | Development Economics Research | Scientific Writing | GIS Fundamentals | R Language | SQL | Data Analysis | Fluent Portuguese and Advanced English
@@ -65,7 +65,7 @@ Instructors of the Academic Week workshop. The aim is to share the process of ge
 ## Talks & Lectures
 
 - IV Fórum do Observatório PUC-Campinas. 2023. [Encontro].
-- Academic Week at Pontifical Catholic University of Campinas University. Geocoding of the Unify Regristy Families. 2023. [Exhibition](https://drive.google.com/file/d/1A0jvTvv9-1QJMUhVJcPWKSG7ejmmY03D/view?usp=sharing).
+- Academic Week at Pontifical Catholic University of Campinas University. Geocoding of the Single Regristy Families. 2023. [Exhibition](https://drive.google.com/file/d/1A0jvTvv9-1QJMUhVJcPWKSG7ejmmY03D/view?usp=sharing).
 - Annual Extension Meeting of the Pontifical Catholic University of Campinas Observatory: Productive Structure and Regional Socioeconomic Development. 2022. [Meeting](https://drive.google.com/file/d/1DZ-FjKGwzFQF7h89__iNQDeGrHK6U2_w/view?usp=sharing).
 
 ## Awards
