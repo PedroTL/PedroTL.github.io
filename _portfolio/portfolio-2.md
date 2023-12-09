@@ -216,7 +216,11 @@ Econometric modeling and application of Exploratory Spatial Data Analysis (AEDE)
 
 It was evident that for this analysis structure, considering cross-section data from the year 2010 at the municipal level for southeastern Brazil in both dependent and independent variables, the addition of the spatial component does not fully support the hypothesis explained in the OLS model. The interpretative results of Spatial Lag are shown in Table 6.
 
-<img src="/images/tab8.png" alt="tab8" />
+<div class="figure" style="text-align: center">
+    <p class="title">Frame 2: Interpretation of Spatial Lag (SAR)</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/tab8.png" alt="Frame 2: Interpretation of Spatial Lag (SAR" width="50%"/>
+</div>
 
 The model indicates that the most sensitive variable was the percentage of children aged 6 to 14 years out of school, indicating that an increase of one unit in the variable in question would have an average impact of 17,074 on the log-smoothed homicide rate (100 thousand people).
 
