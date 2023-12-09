@@ -54,12 +54,16 @@ Developed in collaboration with FEAC foundation analysts and researchers from th
 
 <img src="/images/1-Map-Geocoding.jpeg" alt="1-Map-Geocoding" />
 
+### Geocoding and Cartography for Socioeconomic Studies
+[Workshop](https://drive.google.com/file/d/1L3MPm8HDa4l9S6Ercza_izJzuLNSIsUG/view?usp=sharing): 
+
+Driven by my interest in GIS and spatial data analysis, I was one of the instructors for a two-day workshop entailing the process of geocoding and map making in the R language.
+
 ### Monthly Foreign Trade Report of the Metropolitan Region of Campinas (MRC)
 [Publication](https://observatorio.puc-campinas.edu.br/informativo-mensal-balanca-comercial-da-regiao-metropolitana-de-campinas-volume-5-n-06-2022/)
 
 Monthly Foreign Trade Report of the Metropolitan Region of Campinas (MRC), generated using an automated workflow in RMarkdown. This report contains vital data on exports and imports, including the trade balance, presented with both yearly and monthly comparisons. It elaborates on the complexity of exported and imported goods, making it a valuable tool for decision-makers in industrial and public sectors.
 
-### [Workshop](https://drive.google.com/file/d/1L3MPm8HDa4l9S6Ercza_izJzuLNSIsUG/view?usp=sharing): Geocoding and Cartography for Socioeconomic Studies
 
 Instructors of the Academic Week workshop. The aim is to share the process of geocoding addresses and creating maps for various purposes using the R programming language.
 
