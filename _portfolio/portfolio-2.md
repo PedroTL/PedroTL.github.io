@@ -94,13 +94,15 @@ One main problem in selecting the independent variables is that even after the c
 
 The final model provided the best fit, although manual alterations were needed to deal with multicollinearity. Mostly, two variables selected in the stepwise regression were removed, the HDI index and the income HDI index. The dependent variable was transformed to log, being chosen as the best fit in the stepwise regression. The final independent variables can be seen in Table 1 alongside the main category they fall into.
 
-Frame 2 presents the main variables and the expected impact that they will have on the log-smoothed homicide rate (100 thousand people). The results of the OLS model are shown in Table 2.
+Frame 2 presents the main variables and the expected impact that they will have on the log-smoothed homicide rate (100 thousand people). 
 
 <div class="figure" style="text-align: center">
     <p class="title">Frame 1: Independent Variables and Expected Impact</p>
     <span id="fig:img-with-knitr"></span>
     <img src="/images/tab2.png" alt="Frame 1: Independent Variables and Expected Impact" width="70%"/>
 </div>
+
+The results of the OLS model are shown in Table 2.
 
 <div class="figure" style="text-align: center">
     <p class="title">Table 2: Results of OLS</p>
