@@ -188,7 +188,6 @@ It is worth mentioning that the impact of the variables cannot be interpreted on
 
 We have that the change of $i_{th}$ predictor municipalities can affect the result of the $j_{th}$ region. The two situations are the direct impact of a predictor observation on its own result and the indirect impact of a neighboring predictor observation on its result. Table 5 shows the impact results for the estimated model.
 
-
 <div class="figure" style="text-align: center">
     <p class="title">Table 6: Impacts of Spatial Lag (SAR)</p>
     <span id="fig:img-with-knitr"></span>
