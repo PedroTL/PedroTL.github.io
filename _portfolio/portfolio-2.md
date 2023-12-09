@@ -52,7 +52,11 @@ Overall, the literature presents a variety of variables, as well as their justif
 
 Therefore, it was possible to identify five main categories, namely, inequality, the predisposition of young men, education, family instability, urbanization, and risk. This division will be used as the basis for the methodological process for building and estimating the model.
 
-<img src="/images/tab1.png" alt="tab1" />
+<div class="figure" style="text-align: center">
+    <p class="title">Table 1: Categories and Independent Variables </p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/tab1.png" alt="Table 1: Categories and Independent Variables" width="50%"/>
+</div>
 
 ## Methodology
 
@@ -92,9 +96,17 @@ The final model provided the best fit, although manual alterations were needed t
 
 Frame 2 presents the main variables and the expected impact that they will have on the log-smoothed homicide rate (100 thousand people). The results of the OLS model are shown in Table 2.
 
-<img src="/images/tab2.png" alt="tab2" />
+<div class="figure" style="text-align: center">
+    <p class="title">Frame 1: Independent Variables and Expected Impact</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/tab2.png" alt="Frame 1: Independent Variables and Expected Impact" width="50%"/>
+</div>
 
-<img src="/images/tab3.png" alt="tab3" />
+<div class="figure" style="text-align: center">
+    <p class="title">Table w: Results of OLS</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/tab3.png" alt="Table 2: Results of OLS" width="50%"/>
+</div>
 
 The model falls into the expected results, with all variables with the anticipated sign being statistically significant the same as the model, and the independent variables explain 13% of the variability of the dependent variable. The model also doesn't present a problem with multicollinearity, with all variables having $VIF < 2.60$.
 
@@ -120,7 +132,11 @@ One of the possible steps to attest to spatial autocorrelation is the Moran I te
 
 The Moran I bring a coefficient that quantifies the strength of the Spatial Correlation, being between 1 and -1. Thus, 1 would indicate the existence of a strong positive Spatial Autocorrelation, and -1 a negative one.
 
-<img src="/images/tab4.png" alt="tab4" />
+<div class="figure" style="text-align: center">
+    <p class="title">Table 3: Moran I - Spatial Autocorrelation</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/tab4.png" alt="Table 3: Moran I - Spatial Autocorrelation" width="50%"/>
+</div>
 
 The test presents statistical significance, and the Observed Moran I indicate a moderate and positive autocorrelation. Therefore, we can conclude that for this model, the residuals are systematically related.
 
@@ -170,7 +186,6 @@ With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation
     <span id="fig:img-with-knitr"></span>
     <img src="/images/tab5.png" alt="Table 4: Lagrange Multiplier" width="50%"/>
 </div>
-
 
 The final results can be seen in Table 5. The addition of the spatial component in the Spatial Lag (SAR) did not hold significance for variables such as % Pop. Male 15 to 29, log(Extremely Poor Pop), Normalized Gini Index and % Pop. Urban.
 
