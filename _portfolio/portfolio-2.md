@@ -167,8 +167,8 @@ With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation
 
 <div class="figure" style="text-align: center">
     <span id="fig:img-with-knitr"></span>
-    <img src="/images/tab5.png" alt="Table 4: Lagrange Multiplier" width="100%"/>
-    <p class="caption">Table 4: Lagrange Multiplier</p>
+    <img src="/images/tab5.png" alt="Table 4: Lagrange Multiplier" width="50%"/>
+    <p class="title">Table 4: Lagrange Multiplier</p>
 </div>
 
 
