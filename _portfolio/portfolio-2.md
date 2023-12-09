@@ -165,7 +165,31 @@ Anselin. L (2005) uses two Lagrange multiplier tests to access spatial dependenc
 
 With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation of the model and, more specifically, select which one would provide a better fit: Spatial Lag (SAR) or Spatial Error (SEM). The results can be seen in Table 4. Both Lagrange multiplier tests were made, and the Spatial Lag (SAR) was chosen as the robust one.
 
-<img src="/images/tab5.png" alt="tab5" />
+<html>
+<head>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; /* Adjust the height if needed */
+        }
+        .image-container img {
+            max-width: 100%; /* Ensure the image doesn't exceed its original size */
+            max-height: 100%; /* Ensure the image doesn't exceed its original size */
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container">
+    <h2>Table 4 - Lagrange Multiplier - Diagnosis of Spatial Dependence</h2>
+    <img src="/images/tab5.png" alt="tab5" />
+</div>
+
+</body>
+</html>
 
 <html>
 <head>
@@ -186,12 +210,13 @@ With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation
 <body>
 
 <div class="image-container">
-    <h2>Table 1 - About Something XX</h2>
+    <h2>Table 5 - Results of Spatial Lag (SAR)</h2>
     <img src="/images/tab6.png" alt="tab6" />
 </div>
 
 </body>
 </html>
+
 The final results can be seen in Table 5. The addition of the spatial component in the Spatial Lag (SAR) did not hold significance for variables such as % Pop. Male 15 to 29, log(Extremely Poor Pop), Normalized Gini Index, % Pop. Urban.
 
 On the other hand, the Log-Likelihood and Akaike Information Criterion (AIC) measures show improvement when compared to the OLS model. The Log-Likelihood increases from -1,717.44 to -1,157.394, while the AIC reduces from 3454.9 to 2,336.787.
