@@ -171,13 +171,14 @@ With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation
     <img src="/images/tab5.png" alt="Table 4: Lagrange Multiplier" width="50%"/>
 </div>
 
+
+The final results can be seen in Table 5. The addition of the spatial component in the Spatial Lag (SAR) did not hold significance for variables such as % Pop. Male 15 to 29, log(Extremely Poor Pop), Normalized Gini Index, % Pop. Urban.
+
 <div class="figure" style="text-align: center">
     <p class="title">Table 5: Results of Spatial Lag (SAR)</p>
     <span id="fig:img-with-knitr"></span>
     <img src="/images/tab6.png" alt="Table 5: Results of Spatial Lag (SAR)" width="50%"/>
 </div>
-
-The final results can be seen in Table 5. The addition of the spatial component in the Spatial Lag (SAR) did not hold significance for variables such as % Pop. Male 15 to 29, log(Extremely Poor Pop), Normalized Gini Index, % Pop. Urban.
 
 On the other hand, the Log-Likelihood and Akaike Information Criterion (AIC) measures show improvement when compared to the OLS model. The Log-Likelihood increases from -1,717.44 to -1,157.394, while the AIC reduces from 3454.9 to 2,336.787.
 
