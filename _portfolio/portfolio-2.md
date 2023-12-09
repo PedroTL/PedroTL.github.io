@@ -171,9 +171,11 @@ With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation
     <img src="/images/tab5.png" alt="Table 4: Lagrange Multiplier" width="50%"/>
 </div>
 
-
-
-<img src="/images/tab6.png" alt="tab6" />
+<div class="figure" style="text-align: center">
+    <p class="title">Table 5: Results of Spatial Lag (SAR)</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/tab6.png" alt="Table 5: Results of Spatial Lag (SAR)" width="50%"/>
+</div>
 
 The final results can be seen in Table 5. The addition of the spatial component in the Spatial Lag (SAR) did not hold significance for variables such as % Pop. Male 15 to 29, log(Extremely Poor Pop), Normalized Gini Index, % Pop. Urban.
 
