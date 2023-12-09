@@ -180,14 +180,13 @@ With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation
             max-height: 50%; /* Ensure the image doesn't exceed its original size */
         }
         p {
-            margin-bottom: 10px; /* Adjust the margin-bottom value to reduce space */
+            margin-bottom: 0px; /* Adjust the margin-bottom value to reduce space */
         }
     </style>
 </head>
 <body>
 
 <div class="image-container">
-    <p>Text before the image</p>
     <h2>Table 4 - Lagrange Multiplier - Diagnosis of Spatial Dependence</h2>
     <img src="/images/tab5.png" alt="tab5" />
 </div>
