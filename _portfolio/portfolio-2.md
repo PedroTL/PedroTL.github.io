@@ -164,7 +164,6 @@ Furthermore, the OLS model provides the first diagnosis of the relationship betw
 Anselin. L (2005) uses two Lagrange multiplier tests to access spatial dependence; however, it is common to access the residuals of the OLS model and perform the Moran I test. To identify Spatial Autocorrelation, it is necessary to create a neighborhood matrix. The choice of which type of matrix is based on the nature of the relationship studied.
 
 With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation of the model and, more specifically, select which one would provide a better fit: Spatial Lag (SAR) or Spatial Error (SEM). The results can be seen in Table 4. Both Lagrange multiplier tests were made, and the Spatial Lag (SAR) was chosen as the robust one.
-
 <html>
 <head>
     <style>
