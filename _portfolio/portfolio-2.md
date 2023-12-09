@@ -150,7 +150,9 @@ On the other hand, it is also possible that the Spatial Error (SEM) could be a b
 This model deals with spatial heterogeneity by estimating the spatial coefficient within the regression error. The model includes an error term for neighbors, defined by the neighborhood matrix with weights $W$, along with the usual error term.
 
 $$y = x \beta + u$$
+
 $$u = \lambda Wu + \varepsilon |\lambda|$$
+
 $$u = u = \lambda Wu + \xi$$
 
 An example would be the study of crime in an area that would be influenced not only by its factor but also by crime in neighboring regions. In this way, the model captures the spatial correlation through error terms.
