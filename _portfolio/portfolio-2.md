@@ -173,11 +173,11 @@ With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 100vh; /* Adjust the height if needed */
+            height: 50vh; /* Adjust the height if needed */
         }
         .image-container img {
-            max-width: 100%; /* Ensure the image doesn't exceed its original size */
-            max-height: 100%; /* Ensure the image doesn't exceed its original size */
+            max-width: 70%; /* Ensure the image doesn't exceed its original size */
+            max-height: 70%; /* Ensure the image doesn't exceed its original size */
         }
     </style>
 </head>
