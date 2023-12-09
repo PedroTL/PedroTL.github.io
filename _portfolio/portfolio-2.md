@@ -165,7 +165,14 @@ Anselin. L (2005) uses two Lagrange multiplier tests to access spatial dependenc
 
 With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation of the model and, more specifically, select which one would provide a better fit: Spatial Lag (SAR) or Spatial Error (SEM). The results can be seen in Table 4. Both Lagrange multiplier tests were made, and the Spatial Lag (SAR) was chosen as the robust one.
 
-![Table 4 - Lagrange Multiplier](/images/tab5.png)
+```
+<div class="figure" style="text-align: center">
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/tab5.png" alt="Table 4: Lagrange Multiplier" width="100%"/>
+    <p class="caption">Table 4: Lagrange Multiplier</p>
+</div>
+
+```
 
 <img src="/images/tab6.png" alt="tab6" />
 
