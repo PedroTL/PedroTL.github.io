@@ -64,7 +64,6 @@ The methodology aims to discuss the fundamental analyses surrounding the concept
 
 The study starts with the construction of a model based on the main variables chosen as the determinants of crime. The dependent variable, homicide rate (100,000 people), was chosen. The variable passed to a Bayesian empirical smoothing process; the goal was to deal with high variance, especially in small municipalities. The methodology helps in making predictions or estimating values based on observed data. In simpler terms, it's like using past information to make educated guesses about what might happen next.
 
-<!DOCTYPE html>
 <html>
 <head>
     <style>
