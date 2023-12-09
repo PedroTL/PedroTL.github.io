@@ -58,6 +58,7 @@ Therefore, it was possible to identify five main categories, namely, inequality,
     <img src="/images/tab1.png" alt="Table 1: Categories and Independent Variables" width="70%"/>
 </div>
 
+
 ## Methodology
 
 The present work aimed to apply spatial econometrics and Exploratory Spatial Data Analysis (AEDE) given the assumptions presented in Becker's theory (1968). The contributions of similar studies visited in the literature review were taken into account, serving as a basis for structuring the model and selecting socioeconomic variables. 
@@ -102,6 +103,7 @@ Frame 2 presents the main variables and the expected impact that they will have 
     <img src="/images/tab2.png" alt="Frame 1: Independent Variables and Expected Impact" width="70%"/>
 </div>
 
+
 The results of the OLS model are shown in Table 2.
 
 <div class="figure" style="text-align: center">
@@ -109,6 +111,7 @@ The results of the OLS model are shown in Table 2.
     <span id="fig:img-with-knitr"></span>
     <img src="/images/tab3.png" alt="Table 2: Results of OLS" width="70%"/>
 </div>
+
 
 The model falls into the expected results, with all variables with the anticipated sign being statistically significant the same as the model, and the independent variables explain 13% of the variability of the dependent variable. The model also doesn't present a problem with multicollinearity, with all variables having $VIF < 2.60$.
 
@@ -139,6 +142,7 @@ The Moran I bring a coefficient that quantifies the strength of the Spatial Corr
     <span id="fig:img-with-knitr"></span>
     <img src="/images/tab4.png" alt="Table 3: Moran I - Spatial Autocorrelation" width="70%"/>
 </div>
+
 
 The test presents statistical significance, and the Observed Moran I indicate a moderate and positive autocorrelation. Therefore, we can conclude that for this model, the residuals are systematically related.
 
@@ -189,6 +193,7 @@ With both Lagrange multiplier tests, we can identify the Spatial Autocorrelation
     <img src="/images/tab5.png" alt="Table 4: Lagrange Multiplier" width="50%"/>
 </div>
 
+
 The final results can be seen in Table 5. The addition of the spatial component in the Spatial Lag (SAR) did not hold significance for variables such as % Pop. Male 15 to 29, log(Extremely Poor Pop), Normalized Gini Index and % Pop. Urban.
 
 <div class="figure" style="text-align: center">
@@ -196,6 +201,7 @@ The final results can be seen in Table 5. The addition of the spatial component 
     <span id="fig:img-with-knitr"></span>
     <img src="/images/tab6.png" alt="Table 5: Results of Spatial Lag (SAR)" width="70%"/>
 </div>
+
 
 On the other hand, the Log-Likelihood and Akaike Information Criterion (AIC) measures show improvement when compared to the OLS model. The Log-Likelihood increases from -1,717.44 to -1,157.394, while the AIC reduces from 3454.9 to 2,336.787.
 
@@ -211,6 +217,7 @@ We have that the change of $i_{th}$ predictor municipalities can affect the resu
     <img src="/images/tab7.png" alt="Table 6: Impacts of Spatial Lag (SAR)" width="70%"/>
 </div>
 
+
 ## Discussion 
 
 The present work aimed to analyze the determinants of crime in southeastern Brazil, using Becker's theoretical framework (1968) and a review of similar studies for the process of choosing variables for the determinants of crime.
@@ -223,6 +230,7 @@ It was evident that for this analysis structure, considering cross-section data 
     <span id="fig:img-with-knitr"></span>
     <img src="/images/tab8.png" alt="Frame 2: Interpretation of Spatial Lag (SAR)" width="70%"/>
 </div>
+
 
 The model indicates that the most sensitive variable was the percentage of children aged 6 to 14 years out of school, indicating that an increase of one unit in the variable in question would have an average impact of 17,074 on the log-smoothed homicide rate (100 thousand people).
 
