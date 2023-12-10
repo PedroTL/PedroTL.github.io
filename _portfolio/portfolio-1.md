@@ -39,7 +39,12 @@ In the case of only two services providing the output with the same Zip Code as 
 
 When no service meets the Zip Code criteria, the methodology goes directly to the compared distances and the MDC tie brake. When there are three outputs, the distance is looked at, and then the tiebreaker happens. If there are just two services, the tiebreaker will happen directly. In the case of only one service, this is considered final. Every step can be viewed in the flow chart below.
 
-<img src="/images/Chart_one.png" alt="Chart_one" />
+<div class="figure" style="text-align: center">
+    <p class="title">Figure 1: Flow Chart Geocoding National Directory of Address</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/Chart_one.png" alt="Figure 1: Flow Chart Geocoding National Directory of Address" width="70%"/>
+</div>
+<br>
 
 After the geocoding of the NDA data set, the coordinates will be donated to the Single Registry data set, which is linked by Zip Code, and contains the families. One problem was discovered in the Single Registry data set related to the Zip Code that was being assigned to families, but it did not correspond to the address that was input to them. This was later called a "generic Zip Code", because the information was not related to the original address. This most likely occurred because many families lived in areas that were occupied, so there was no official address provided by the Correio, meaning that to fill out the registry, a generic Zip Code was given.
 
@@ -49,7 +54,12 @@ The identification of these families was made based on the frequency of Zip Code
 
 The process to pick the final coordinates for those addresses follows the same logic as the NDA geocoding. The main difference is that there is no comparison between the Zip Code inputs because they are not linked to the address. To resolve this issue, the confirmation procedure involved locating the output Zip Code, providing the input address, and examining whether the output Zip Code was included in the NDA data set. This worked as the first quality step. All the others follow the same principle as before: looking at the distance, picking the two closest, and tie-breaking by the MDC global rank. The final step can be viewed in the flow chart below.
 
-<img src="/images/Chart_Two.png" alt="Chart_Two" />
+<div class="figure" style="text-align: center">
+    <p class="title">Figure 2: Flow Chart Geocoding Single Registry Data Set</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/Chart_Two.png" alt="Figure 2: Flow Chart Geocoding Single Registry Data Set" width="70%"/>
+</div>
+<br>
 
 ## Results
 
@@ -63,7 +73,12 @@ The quality performance in this step shows that Bing was more accurate with non-
 
 Finally, 71.452 of the 71.466 families managed to be geocoded. The map below shows the Kernel Density for the municipality, mapping the areas with a high frequency of registry families. The results entailed the segregation of the south area of Campinas-SP and the division made by Highway Anhanguera.
 
-<img src="/images/1-Map-Geocoding.jpeg" alt="1-Map-Geocoding" />
+<div class="figure" style="text-align: center">
+    <p class="title">Figure 3: Kernel Density of Registry Families in Campinas-SP</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/1-Map-Geocoding.jpeg" alt="Figure 3: Kernel Density of Registry Families in Campinas-SP" width="70%"/>
+</div>
+<br>
 
 ## References
 
