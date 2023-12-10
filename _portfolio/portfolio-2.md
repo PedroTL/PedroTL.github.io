@@ -85,11 +85,8 @@ The study starts with the construction of a model based on the main variables ch
 <body>
 
 <div class="image-container">
-  <figure>
     <img src="/images/Figura_Not_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
     <img src="/images/Figura_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
-    <figcaption> Figure 1: Comparison between smoothed and original homicide rate</figcaption>
-  </figure>
 </div>
 
 </body>
@@ -135,7 +132,12 @@ Spatial Correlation refers to the strength of the association between cases and 
 
 The standard deviation of the residuals is used as a visualization method; it indicates how much the data differs from the mean. In this case, each standard deviation becomes a category in the choropleth map that can be visualized in Figure 3.
 
-<img src="/images/Figura_Residuals.png" alt="Figura_Residuals" />
+<div class="figure" style="text-align: center">
+    <p class="title">Table 3: Model Residuals</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/Figura_Residuals.png" alt="Figure 3: Model Residuals" width="70%"/>
+</div>
+<br>
 
 The result shows that certain areas in red are overestimating and other areas in blue are underestimating. Furthermore, it is possible to visualize clusters, mainly in the states of Rio de Janeiro and Espírito Santo, indicating that Spatial Autocorrelation possibly exists.
 
