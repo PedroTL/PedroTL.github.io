@@ -91,7 +91,7 @@ The study starts with the construction of a model based on the main variables ch
 <body>
 
 <div class="image-container">
-    <p class="title">Figure 2: Categories and Independent Variables</p>
+    <p class="title">Figure 1: Comparison between the smoothed and original homicide rates</p>
     <span id="fig:img-with-knitr"></span>
     <img src="/images/Figura_Not_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
     <img src="/images/Figura_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
@@ -141,7 +141,7 @@ Spatial Correlation refers to the strength of the association between cases and 
 The standard deviation of the residuals is used as a visualization method; it indicates how much the data differs from the mean. In this case, each standard deviation becomes a category in the choropleth map that can be visualized in Figure 3.
 
 <div class="figure" style="text-align: center">
-    <p class="title">Table 3: Model Residuals</p>
+    <p class="title">Figure 2: Model Residuals</p>
     <span id="fig:img-with-knitr"></span>
     <img src="/images/Figura_Residuals.png" alt="Figure 3: Model Residuals" width="70%"/>
 </div>
@@ -168,7 +168,12 @@ In general, it is possible to identify areas where the log-smoothed homicide rat
 
 The representation Figure 4 shows the categories and specifies the clusters in regions where the Moran location test obtained statistical significance at a p-value < 0.1.
 
-<img src="/images/Figura_LISA.png" alt="Figura_LISA" />
+<div class="figure" style="text-align: center">
+    <p class="title">Figure 3: Local Indicator of Spatial Association (LISA)</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/Figura_LISA.png" alt="Figure 3: Local Indicator of Spatial Association (LISA)" width="70%"/>
+</div>
+<br>
 
 ### Choosing the Spatial Regression
 
