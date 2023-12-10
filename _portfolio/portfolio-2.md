@@ -257,3 +257,63 @@ The inclusion of the binary variable for municipalities belonging to metropolita
 The risk has important relevance, as it alone may not have a positive impact on the reduction of crime and may create the opposite effect. An example would be to drastically increase the penalty for conviction for a minor crime; this could lead to a higher level of violence since the risk has increased drastically; however, the opportunity for legal activities is still extremely low, maintaining the balance of individual decisions and increasing data for society.
 
 In general, Becker's (1968) vision contributes to organizing and measuring the decision-making process, allowing strategies to be devised to mitigate the increase in crime. Therefore, it is plausible to identify important variables for the individual's decision-making process in relation to criminal activities, bringing greater effectiveness to government actions and public security policies.
+
+## References
+
+ANSELIN, Luc. Exploring Spatial Data with GeoDaTM: A Workbook. Illinois: Center For Spatially Integrated Social Science, 2005. 224 p. Disponível em: https://edisciplinas.usp.br/pluginfile.php/4130006/mod_folder/content/0/geodaworkbook.pdf. Acesso em: 03 jun. 2023.
+
+ARAUJO, Ari Francisco; FAJNZYLBER, Pablo. CRIME E ECONOMIA: UM ESTUDO DAS MICRORREGIÕES MINEIRAS. IX Seminario sobre a Economia Mineira, [s. l.], p. 809-840, 2000.
+
+BECKER, Gary S. Crime and Punishment: An Economic Approach. Journal of Political Economy, Columbia, v. 76, ed. 01, p. 169-217, 1968.
+
+CERQUEIRA, DANIEL RICARDO DE CASTRO. Causas e consequências do crime no Brasil. Orientador: João Manoel Pinho de Mello Rodrigo Reis Soares. 2014. 188 p. Tese (Doutorado) - Pontifícia Universidade Católica do Rio de Janeiro, Rio de Janeiro, 2014.
+
+COMANOR, W. S.; PHILLIPS, L. The Impact of Income and Family Structure on Delinquency. Journal of Applied Economics, v. 5, n. 2, p. 209–232, nov. 2002.
+
+EHRLICH, Isaac. Participation in Illegitimate Activities: A Theoretical and Empirical Investigation. Journal of Political Economy, [s. l.], v. 83, ed. 3, p. 521-565, 1973.
+
+FAJNZYLBER, P.; LEDERMAN, D.; LOAYZA, N. Determinants of crime rates in Latin America and the world. [s.l.] The World Bank, 1998.
+
+FILHO, Claudio Chaves Beato; REIS, Ilka Afonso. Desigualdade, Desenvolvimento Socioeconômico e Crime. Atlas da Violência - IPEA, [s. l.], p. 1-14, 1999.
+
+FRANCISCO; FAJNZYLBER, P. O que causa a criminalidade violenta no Brasil? Uma análise a partir do modelo econômico do crime: 1981 a 1996. 1 jan. 2001.
+
+GLAESER, EDWARD L.; SACERDOTE, B. Why is There More Crime in Cities? Journal of Political Economy, v. 107, n. S6, p. S225–S258, dez. 1999.
+HEINEKE, John; BLOCK, Michael Kent. The supply of legal and illegal activity: A choice theoretic analysis. Santa Clara Business Review, [s. l.], p. 1-16, 1973.
+In-Text Citation: (Ye & Wu, 2011)
+
+JEFFERY, Clarence Ray. The Historical Development of Criminology. Journal of Criminal Law and Criminology, [s. l.], v. 50, p. 3-19, [1960].
+
+LOBOS, J. Factors Affecting Juvenile Delinquency. Faculty Research Journal Bulacan State University - Meneses Campus, v. 7, p. 1–6, 2018.
+
+LOCHNER, Lance; MORETTI, Enrico. The effect of education on crime: evidence from prison inmates, arrests, and self-reports. The American Economic Review, Nashville, v. 94, n. 1, 2004, p. 155-189.
+
+MAJID MADDAH. AN EMPIRICAL ANALYSIS OF THE RELATIONSHIP BETWEEN UNEMPLOYMENT AND THEFT CRIMES. 1 jan. 2013.
+
+NAKABASHI, Luciano et al. Boletim de Segurança Pública - Ribeirão Preto. Centro de Pesquisa em Economia Regional da FUNDACE (CEPER), [s. l.], v. 24, p. 1-10, 2020.
+
+NAKABASHI, Luciano et al. Boletim de Segurança Pública - Ribeirão Preto. Centro de Pesquisa em Economia Regional da FUNDACE (CEPER), [s. l.], v. 24, p. 1-10, 2020.
+
+PRATES, Thierry Molnar et al. HOMICIDES IN ALAGOAS – BRAZIL: A SPATIAL ANALYSIS. Estudios Económicos, Bahía Blanca, v., n. 80, p. 11-41, jan. 2023. Disponível em: https://www.redalyc.org/journal/5723/572373856001/html/. Acesso em: 14 set. 2023.
+
+RESENDE, João Paulo; ANDRADE, Mônica Viegas. Crime Social, Castigo Social: Desigualdade de Renda e Taxas de Criminalidade nos Grandes Municípios Brasileiros. Estudos Econômicos, São Paulo, v. 41, ed. 1, p. 174-195, 2011.
+
+RESENDE, João Paulo; ANDRADE, Mônica Viegas. Crime Social, Castigo Social: Desigualdade de Renda e Taxas de Criminalidade nos Grandes Municípios Brasileiros. Estudos Econômicos, São Paulo, v. 41, ed. 1, p. 174-195, 2011.
+
+SALVIATO, Rafael Buttini; MOURÃO, Gustavo Nunes. ECONOMIA DO CRIME: UM ESTUDO SOBRE A TEORIA ECONÔMICA DO CRIME E AS SUAS VERIFICAÇÕES NO ESTADO DO PARANÁ. Memorial TCC – Caderno da Graduação, [s. l.], p. 353-368, 2015.
+
+SCORZAFAVE, Luiz Guilherme; SOARES, Milena Karla. Income inequality and pecuniary crimes. Economics Letters, [s. l.], v. 104, p. 40-42, 2009.
+
+SHIKIDA, Pery Francisco Assis. ECONOMIA DO CRIME: TEORIA E EVIDÊNCIAS EMPÍRICAS A PARTIR DE UM ESTUDO DE CASO NA PENITENCIÁRIA ESTADUAL DE PIRAQUARA (PR). Revista de Economia e Administração, [s. l.], p. 1-20, 2005.
+
+SILVA, Carlos et al. Spatial Modeling for Homicide Rates Estimation in Pernambuco State-Brazil. International Journal of Geo-Information. Switzerland, p. 1-19. dez. 2020.
+
+MEDINA, Juanjo; SOLYMOSI, Reka. Crime Mapping and Spatial Data Analysis using R. [S. L.]: Github, 2022. Disponível em: https://maczokni.github.io/crime_mapping/. Acesso em: 06 jun. 2023.
+
+VIAPIANA, Luiz Tadeu. Economia do crime: uma explicação para a formação do criminoso. Editora AGE Ltda. 2006
+
+Ward, M. D., & Gleditsch, K. S. (2008). Spatial Regression Models. SAGE Publications.
+
+WEISBURD, David et al. Advanced Statistics in Criminology and Criminal Justice. 5. ed. Switzerland: Springer, 2022. 550 p.
+
+Ye, X., & Wu, L. (2011, April 1). Analyzing the dynamics of homicide patterns in Chicago: ESDA and spatial panel approaches. Applied Geography, Elsevier BV. https://doi.org/10.1016/j.apgeog.2010.08.006
