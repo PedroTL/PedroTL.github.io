@@ -75,17 +75,23 @@ The study starts with the construction of a model based on the main variables ch
     <style>
         .image-container {
             display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .image-container img {
             width: 50%; /* Adjust the width as needed */
             margin: 5px; /* Adjust the margin as needed */
         }
+        .title {
+            font-weight: bold;
+            margin-bottom: 10px; /* Adjust the margin-bottom as needed */
+        }
     </style>
 </head>
 <body>
 
-<div class="image-container", style="text-align: center">
-    <p class="title">Figure 2: Categories and Independent Variables </p>
+<div class="image-container">
+    <p class="title">Figure 2: Categories and Independent Variables</p>
     <span id="fig:img-with-knitr"></span>
     <img src="/images/Figura_Not_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
     <img src="/images/Figura_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
