@@ -85,6 +85,8 @@ The study starts with the construction of a model based on the main variables ch
 <body>
 
 <div class="image-container">
+    <p class="title">Figure 2: Categories and Independent Variables </p>
+    <span id="fig:img-with-knitr"></span>
     <img src="/images/Figura_Not_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
     <img src="/images/Figura_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
 </div>
