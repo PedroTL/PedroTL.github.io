@@ -74,7 +74,7 @@ The quality performance in this step shows that Bing was more accurate with non-
 Finally, 71.452 of the 71.466 families managed to be geocoded. The map below shows the Kernel Density for the municipality, mapping the areas with a high frequency of registry families. The results entailed the segregation of the south area of Campinas-SP and the division made by Highway Anhanguera.
 
 <div class="figure" style="text-align: center">
-    <p class="title", style="font-weight: bold">Figure 3: Kernel Density of Registry Families in Campinas-SP</p>
+    <p class="title" style="font-weight: bold;">Figure 3: Kernel Density of Registry Families in Campinas-SP</p>
     <span id="fig:img-with-knitr"></span>
     <img src="/images/1-Map-Geocoding.jpeg" alt="Figure 3: Kernel Density of Registry Families in Campinas-SP" width="90%"/>
 </div>
