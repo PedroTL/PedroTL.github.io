@@ -3,12 +3,15 @@ title: "Geocoding Families of the Single Registry in Campinas-SP"
 excerpt: "Geocoding methodological process for the families in the Single of Campinas-SP <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
 collection: portfolio
 ---
+<style>body {text-align: justify}</style>
 
 ## Introduction
 
 Any institution that aims to contribute to social transformation wonders what information to collect and how best to read the territory, especially the social vulnerability of its population. At the intra-municipality level, the main source of data is the Demographic Census, which still has huge expectations surrounding the release of the microdata and data aggregated by census tract. Even though it is an essential and irreplaceable source, the decennial period imposes the challenge of seeking alternatives that allow more frequent readings and are therefore adherent to the eternally changing social situation.
 
 With this goal, the two institutions, FEAC Foundation and Pontifical Catholic University of Campinas Observatory, started to invest in the treatment and analysis of the Single Registry (CadÚnico) which, According to the Secretary for Assessment, Information Management and Single Registry, consists of an identification and socioeconomic characterization of low-income Brazilian families, recording information on household characteristics, education, family composition, work and income, among others. It is worth mentioning that its use for study and research purposes is regulated by decree and requires ethical demands to be met in handling information.
+
+[Full study available in portuguese](https://feac.org.br/wp-content/uploads/2023/10/Geocodificacao_FEAC.pdf?portfolioCats=3105#new_tab)
 
 ## Methodology
 
@@ -56,3 +59,37 @@ The quality performance in this step shows that Bing was more accurate with non-
 Finally, 71.452 of the 71.466 families managed to be geocoded. The map below shows the Kernel Density for the municipality, mapping the areas with a high frequency of registry families. The results entailed the segregation of the south area of Campinas-SP and the division made by Highway Anhanguera.
 
 <img src="/images/1-Map-Geocoding.jpeg" alt="1-Map-Geocoding" />
+
+## References
+
+CAMBON, J. et al. tidygeocoder: An R package for geocoding. Journal of Open Source Software, v. 6, n. 65, p. 
+3544, 2021. Disponível em: https://doi.org/10.21105/joss.03544. Acesso em: set. 2023. 
+
+CUNHA, J. M. P. et al. Expansão metropolitana, mobilidade espacial e segregação nos anos 90: o caso da 
+Região Metropolitana de Campinas. In: ENCONTRO NACIONAL DA ANPUR, 11., 2005, Salvador. Anais... 
+Bahia: ANPUR, 2005. 
+
+CUNHA, J. M. P.; JIMÉNEZ, M. A. Segregação e acúmulo de carências: localização da pobreza e condições 
+educacionais na Região Metropolitana de Campinas. In: CUNHA, J. M. P. (org.). Novas metrópoles paulistas: 
+população, vulnerabilidade e segregação. Campinas: Núcleo de Estudos de População-NEPO/Unicamp, 
+2006. 
+
+EICHELBERGER, P. The Importance of Addresses: The Locus of GIS. In: URISA Annual Conference, Atlanta, 
+Georgia, 1993. p. 200-211.
+
+FEITOSA, F. da F. et al. Termo de Execução Descentralizada n. 01/2019 SNH/MDR e Ipea: Pesquisa de núcleos 
+urbanos informais no Brasil. Rio de Janeiro,: Ipea, 2021. 27 p.
+
+QUINTEIROS, M. E. et al. Quality of automatic geocoding tools: a study using addresses from hospital record 
+files in Temuco, Chile. Cadernos de Saúde Pública, v. 38, n. 1, 2022, p. e00288920. Disponível em: https://doi.
+org/10.1590/0102-311x00288920. Acesso em: set. 2023.
+
+SEADE. Fundação Sistema Estadual de Análise de Dados (org.). Índice Paulista de Vulnerabilidade Social. São 
+Paulo: Governo do Estado, 2013. 18 p.
+
+SECRETARIA NACIONAL DE RENDA DE CIDADANIA (BRASIL). Manual do Entrevistador: cadastro único para 
+programas sociais. 4. ed. [S. L.]: The Union – Smas – Setor de Múltiplas Atividades Sul, 2017. 158 p.
+
+SILVEIRA, I. H. da et al. Utilização do Google Maps para o georreferenciamento de dados do Sistema de 
+Informações sobre Mortalidade no município do Rio de Janeiro, 2010-2012. Epidemiologia e Serviços de 
+Saúde, v. 26, n. 4, nov. 20
