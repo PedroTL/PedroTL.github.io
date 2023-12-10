@@ -75,32 +75,21 @@ The study starts with the construction of a model based on the main variables ch
     <style>
         .image-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
         .image-container img {
             width: 50%; /* Adjust the width as needed */
             margin: 5px; /* Adjust the margin as needed */
-        }
-        .image-container figcaption {
-            text-align: center;
-            font-weight: bold;
-            margin-top: 10px; /* Adjust the margin-top as needed */
         }
     </style>
 </head>
 <body>
 
 <div class="image-container">
-    <figure>
-        <img src="/images/Figura_Not_Smooth_Homicide_Rate.png" alt="Figura_Not_Smooth_Homicide_Rate" />
-        <figcaption>Image 1 - Not Smooth Homicide Rate</figcaption>
-    </figure>
-    <figure>
-        <img src="/images/Figura_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
-        <figcaption>Image 2 - Smooth Homicide Rate</figcaption>
-    </figure>
+  <figure>
+    <img src="/images/Figura_Not_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
+    <img src="/images/Figura_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
+    <figcaption> Figure 1: Comparison between smoothed and original homicide rate</figcaption>
+  </figure>
 </div>
 
 </body>
