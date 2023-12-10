@@ -6,7 +6,7 @@ collection: portfolio
 
 ## Overview
 
-The intentions of this post are to present the main aspects of my final thesis, including the objectives, theoretical framework, literature review, methodology, and results. The full version is available in Portuguese. The content was adapted to a portfolio post structure, emphasizing the key points and bringing out the main results.
+The goal of this post is to present the main aspects of my final thesis, including the objectives, theoretical framework, literature review, methodology, and results. The full version is available in Portuguese. The content was adapted to a portfolio post structure, emphasizing the key points and bringing out the main results.
 
 [Thesis Full Version]()
 
@@ -14,7 +14,7 @@ The intentions of this post are to present the main aspects of my final thesis, 
 
 LUCAS, João Pedro Toledo Tricoli. DETERMINANTS OF CRIME IN BRAZILIAN SOUTHEAST: APPLICATION OF SPATIAL ECONOMETRIC TECHNIQUES. 2023. Undergraduate Thesis. School of Economics, Center for Economics and Business, Pontifical Catholic University of Campinas, Campinas, 2023.
 
-Several fields of knowledge delve into the determinants of criminality, aiming to understand "how" and "why" individuals commit crimes. This study seeks to analyze the determinants of crime in the southeastern region of Brazil by means of spatial econometric techniques based on the theoretical framework of crime economics and Exploratory Spatial Data Analysis (ESDA). The Spatial Lag (SAR) model was applied to the homicide rate (per 100,000 people) in 2010, smoothed by empirical Bayesian methodology, at the municipal level and across socio-economic variable groups encompassing inequality, predisposition of young men, family instability, education, urbanization, and risk. Including the spatial component does not validate the significance found in the simple linear model for variables such as inequality and young men's predisposition to crime. Conversely, it highlights the positive impact of education, family stability, urbanization, the unemployment rate, and apprehension risk in metropolitan regions. It is worth noting the presence of high crime clusters in Rio de Janeiro and Espírito Santo and low crime clusters in the regions of Minas Gerais and São Paulo. In summary, policies aimed at reducing inequalities, promoting education, strengthening family stability, investing in security, and creating job opportunities have the potential to have positive impacts on reducing homicide rates.
+Several fields of knowledge delve into the determinants of criminality, aiming to understand "how" and "why" individuals commit crimes. This study seeks to analyze the determinants of crime in the southeastern region of Brazil by means of spatial econometric techniques based on the theoretical framework of crime economics and Exploratory Spatial Data Analysis (ESDA). The Spatial Lag (SAR) model was applied to the homicide rate (per 100,000 people) in 2010, smoothed by empirical Bayesian methodology, at the municipal level and across socioeconomic variable groups encompassing inequality, predisposition of young men, family instability, education, urbanization, and risk. Including the spatial component does not validate the significance found in the simple linear model for variables such as inequality and young men's predisposition to crime. Conversely, it highlights the positive impact of education, family stability, urbanization, the unemployment rate, and apprehension risk in metropolitan regions. It is worth noting the presence of high crime clusters in Rio de Janeiro and Espírito Santo and low crime clusters in the regions of Minas Gerais and São Paulo. In summary, policies aimed at reducing inequalities, promoting education, strengthening family stability, investing in security, and creating job opportunities have the potential to have positive impacts on reducing homicide rates.
 
 **Keywords:** Economics of Crime; Spatial Econometrics; Spatial Exploratory Data Analysis; Brazilian Southeast.
 
@@ -22,9 +22,9 @@ Several fields of knowledge delve into the determinants of criminality, aiming t
 
 Many fields of science search for answers about criminality; the most famous is sociology, with empirical studies, philosophy, and other areas. The main question in the scope of criminology is "how" and "why" people commit crimes.
 
-The economic contribution comes from Gary Becker, an economist from the University of Chicago. In the study Crime and Punishment: An Economic Approach, Becker used a mathematical framework where, assuming rationality, a person would commit an illegal act when considering that the utility of committing such an offense outweighs the utility he could have by using his time in another legal activity.
+The economic contribution comes from Gary Becker, an economist from the University of Chicago. In the study Crime and Punishment: An Economic Approach, Becker uses a mathematical framework where, assuming rationality, a person would commit an illegal act when considering that the utility of committing such an offense outweighs the utility he could have by using his time in another legal activity.
 
-The utilitarian vision brings an ideal to the choice of a rational individual, weighing the risks and possible rewards when choosing a criminal practice. The inclusion of socioeconomic variables in mathematical modeling aims to identify the possible determinants that influence the individual's decision.
+The utilitarian vision brings an ideal to the choice of a rational individual, weighing the risks and possible rewards when choosing a criminal practice. The inclusion of socioeconomic variables in mathematical modeling aims to identify the possible determinants that influence an individual's decision.
 
 Therefore, this work aims to study the economy of crime with a theoretical framework based on Becker's theory (1968), using spatial econometrics modeling and Exploratory Spatial Data Analysis (ESDA) to identify the relationship between the main socioeconomic variables and crime in the southeast region of Brazil.
 
@@ -46,7 +46,7 @@ It is important to mention that the punishment should always fit the crime becau
 
 ## Literature Review - Determinants of Crime
 
-The literature review looks at the main question surrounding similar studies in crime economy: "What are the socioeconomic variables that impact criminal activities?". The studies looked for different countries and periods to compare the variables chosen and their main impact.
+The literature review looks at the main question surrounding similar studies in crime economy: "What are the socioeconomic variables that impact criminal activities?". This thesis looked at studies in different countries and periods to compare the selected variables and their main impact.
 
 Overall, the literature presents a variety of variables, as well as their justifications in terms of cost and benefit, that are based on the individual's rationality and interpretation of socioeconomic impacts.
 
@@ -61,9 +61,9 @@ Therefore, it was possible to identify five main categories, namely, inequality,
 
 ## Methodology
 
-The present work aimed to apply spatial econometrics and Exploratory Spatial Data Analysis (AEDE) given the assumptions presented in Becker's theory (1968). The contributions of similar studies visited in the literature review were taken into account, serving as a basis for structuring the model and selecting socioeconomic variables. 
+The present work aims to apply spatial econometrics and Exploratory Spatial Data Analysis (AEDE) given the assumptions presented in Becker's theory (1968). The contributions of similar studies visited in the literature review were taken into account, being used to structure the model and select socioeconomic variables.
 
-The methodology aims to discuss the fundamental analyses surrounding the concepts of Spatial Econometrics and Exploratory Analysis of Spatial Data (AEDE). The main topics visited were: Spatial Autocorrelation; Neighborhood Matrices; Moran Indicator and Regression Models, namely, Ordinary Least Squares Method (OLS); Spatial Lag Model (SAR) and Spatial Error Model (SEM), along with the process of choosing spatial regression by Anselin. L (2005).
+The methodology aims to discuss the fundamental analyses surrounding the concepts of Spatial Econometrics and Exploratory Analysis of Spatial Data (AEDE). The main topics visited were: Spatial Autocorrelation; Neighborhood Matrices; Moran Indicator and Regression Models, namely, the Ordinary Least Squares Method (OLS); Spatial Lag Model (SAR) and Spatial Error Model (SEM), along with the process of choosing spatial regression by Anselin. L (2005).
 
 ## Results
 
@@ -93,7 +93,7 @@ The study starts with the construction of a model based on the main variables ch
 
 One main problem in selecting the independent variables is that even after the creation of a category-based filter, there are still many variables that might explain the variability of the homicide rate. Because of that, a stepwise regression was built based on a selection of independent variables. In general terms, stepwise regression is a technique that starts with a complete model and, at each step, gradually eliminates independent variables from the regression model.
 
-The final model provided the best fit, although manual alterations were needed to deal with multicollinearity. Mostly, two variables selected in the stepwise regression were removed, the HDI index and the income HDI index. The dependent variable was transformed to log, being chosen as the best fit in the stepwise regression. The final independent variables can be seen in Table 1 alongside the main category they fall into.
+The final model provided the best fit, although manual alterations were needed to deal with multicollinearity. Mostly, two variables selected in the stepwise regression were removed: the HDI index and the income HDI index. The dependent variable was transformed to log, being chosen as the best fit in the stepwise regression. The final independent variables can be seen in Table 1 alongside the main category they fall into.
 
 Frame 2 presents the main variables and the expected impact that they will have on the log-smoothed homicide rate (100 thousand people). 
 
@@ -115,17 +115,19 @@ The results of the OLS model are shown in Table 2.
 
 The model falls into the expected results, with all variables with the anticipated sign being statistically significant the same as the model, and the independent variables explain 13% of the variability of the dependent variable. The model also doesn't present a problem with multicollinearity, with all variables having $VIF < 2.60$.
 
-The OLS model brings the first idea, and if it is possible to continue the investigation about spatial autocorrelation, In this way, the OLS uses squared errors as the basis for estimating the coefficients; however, the regression assumes that these residuals have constant variance (homoscedasticity). In the case of data with Spatial Autocorrelation, the errors may not be stochastic (random), thus existing patterns of association between nearby regions.
+The OLS model brings the first idea, and if it is possible to continue the investigation about spatial autocorrelation, the OLS uses squared errors as the basis for estimating the coefficients; however, the regression assumes that these residuals have constant variance (homoscedasticity). In the case of data with Spatial Autocorrelation, the errors may not be stochastic (random), thus existing patterns of association between nearby regions.
 
 The main factor is that heteroscedasticity (residuals have unequal variance) violates the principle of OLS regression, being present in errors in spatial relationships and raising the hypothesis that the spatial component must be treated in a special way. As a result, regression using the OLS with data that have a spatial relationship is not recommended since the estimates may contain bias due to a violation of the principle of homoscedasticity of errors. Therefore, despite being a good start to exploring the relationships between variables, other options are recommended, the main ones being Spatial Lag (SAR) and Spatial Error (SEM).
 
 ### Neighboring Matrix
+
 The choice of the neighboring matrix is a key step in spatial regression because it is a mathematical way to express who is and who is not the neighbor for a given region. There are many ways to represent the neighboring matrix; in this study, the queen contiguity of order one was used. Exemplified by chess, we have that in the queen contiguity method, all adjacent polygons, including those found at the vertices, are considered neighbors. They are also given proportional weight to each neighbor; Figure 2 brings out the main idea.
 
 ### Spatial Autocorrelation - Moran I and LISA
+
 After the construction of the OLS model and the confirmation that the proposed relationship holds statistical significance while the impacts fall under the imposed hypotheses, the process begins to identify if there is any Spatial Autocorrelation.
 
-Spatial Correlation refers to the strength of the association between cases and between space, explaining how similar observations are between neighbors. In this case, we could have, as an example, extremely violent regions that spread higher levels of violence to nearby regions. The intensity of violence in a region affects the intensity of violence in nearby locations. In short, Spatial Correlation brings force between variables in space.
+Spatial Correlation refers to the strength of the association between cases and between geographic space, explaining how similar observations are between neighbors. In this case, we could have, as an example, extremely violent regions that spread higher levels of violence to nearby regions. The intensity of violence in a region affects the intensity of violence in nearby locations. In short, Spatial Correlation brings force between variables in space.
 
 The standard deviation of the residuals is used as a visualization method; it indicates how much the data differs from the mean. In this case, each standard deviation becomes a category in the choropleth map that can be visualized in Figure 3.
 
@@ -155,6 +157,7 @@ The representation Figure 4 shows the categories and specifies the clusters in r
 <img src="/images/Figura_LISA.png" alt="Figura_LISA" />
 
 ### Choosing the Spatial Regression
+
 With the Spatial Autocorrelation tested, the next step is to find the most suitable Spatial Model. There are two main models that can be used to represent Spatial patterns: the Spatial Lag (SAR) and Spatial Error (SEM).
 
 The Spatial Lag (SAR) is similar to the OLS but adds a lagged version of the dependent variable as an independent variable. It is used for regression when the dependent variable is influenced by its neighbors, making it one of the most common ways to investigate spatial dependence.
@@ -177,7 +180,7 @@ $$u = \lambda Wu + \varepsilon |\lambda|$$
 
 $$u = u = \lambda Wu + \xi$$
 
-An example would be the study of crime in an area that would be influenced not only by its factor but also by crime in neighboring regions. In this way, the model captures the spatial correlation through error terms.
+An example would be the study of crime in an area that would be influenced not only by its factors but also by crime in neighboring regions. In this way, the model captures the spatial correlation through error terms.
 
 The selection of the Spatial Regression falls under Anselin. L (2005) methodology. The process begins with the construction of an OLS model (OSL), with the objective of studying the relationship between the variables and highlighting the existence or not of Spatial Autocorrelation in the residues.
 
@@ -223,7 +226,7 @@ We have that the change of $i_{th}$ predictor municipalities can affect the resu
 The present work aimed to analyze the determinants of crime in southeastern Brazil, using Becker's theoretical framework (1968) and a review of similar studies for the process of choosing variables for the determinants of crime.
 Econometric modeling and application of Exploratory Spatial Data Analysis (AEDE) tools and methodologies were used to create and estimate the models, observing the impact of the variables and considering the spatial component.
 
-It was evident that for this analysis structure, considering cross-section data from the year 2010 at the municipal level for southeastern Brazil in both dependent and independent variables, the addition of the spatial component does not fully support the hypothesis explained in the OLS model. The interpretative results of Spatial Lag are shown in Table 6.
+It was evident that for this structure analysis, considering cross-section data from the year 2010 at the municipal level for southeastern Brazil in both dependent and independent variables, the addition of the spatial component does not fully support the hypothesis explained in the OLS model. The interpretative results of Spatial Lag are shown in Table 6.
 
 <div class="figure" style="text-align: center">
     <p class="title">Frame 2: Interpretation of Spatial Lag (SAR)</p>
