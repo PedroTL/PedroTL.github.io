@@ -1,9 +1,15 @@
 ---
 title: "Geocoding Families of the Single Registry in Campinas-SP"
-excerpt: "Geocoding methodological process for the families in the Single of Campinas-SP <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
+excerpt: "Geocoding methodological process for the families in the Single Registry of Campinas-SP <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
 collection: portfolio
 ---
 <style>body {text-align: justify}</style>
+
+## Overview
+
+The goal of this post is to present the main aspects of geocoding process of the families in the Single Registry of Campinas-SP, including the objectives, methodology, and results. The full version is available in Portuguese, and the content was adapted to a portfolio post structure, emphasizing the key points and bringing out the main results.
+
+[Full sstudy available in portuguese]()
 
 ## Introduction
 

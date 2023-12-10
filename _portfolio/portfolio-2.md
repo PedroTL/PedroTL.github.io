@@ -7,7 +7,7 @@ collection: portfolio
 
 ## Overview
 
-The goal of this post is to present the main aspects of my final thesis, including the objectives, theoretical framework, literature review, methodology, and results. The full version is available in Portuguese. The content was adapted to a portfolio post structure, emphasizing the key points and bringing out the main results.
+The goal of this post is to present the main aspects of my final thesis, including the objectives, theoretical framework, literature review, methodology, and results. The full version is available in Portuguese and the content was adapted to a portfolio post structure, emphasizing the key points and bringing out the main results.
 
 [Full sstudy available in portuguese]()
 
