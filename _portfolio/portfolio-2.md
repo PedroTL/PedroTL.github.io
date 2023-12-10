@@ -79,7 +79,7 @@ The study starts with the construction of a model based on the main variables ch
             align-items: center;
         }
         .image-container img {
-            width: 50%; /* Adjust the width as needed */
+            width: 80%; /* Adjust the width as needed */
             margin: 5px; /* Adjust the margin as needed */
         }
         .title {
