@@ -9,7 +9,7 @@ collection: portfolio
 
 The goal of this post is to present the main aspects of my final thesis, including the objectives, theoretical framework, literature review, methodology, and results. The full version is available in Portuguese and the content was adapted to a portfolio post structure, emphasizing the key points and bringing out the main results.
 
-[Full sstudy available in portuguese]()
+[Full study available in portuguese]()
 
 ## Abstract
 
@@ -86,6 +86,7 @@ The study starts with the construction of a model based on the main variables ch
         .image-container figcaption {
             text-align: center;
             font-weight: bold;
+            margin-top: 10px; /* Adjust the margin-top as needed */
         }
     </style>
 </head>
@@ -93,12 +94,12 @@ The study starts with the construction of a model based on the main variables ch
 
 <div class="image-container">
     <figure>
-        <figcaption>Image 1 - Smooth Homicide Rate</figcaption>
-        <img src="/images/Figura_Not_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
+        <img src="/images/Figura_Not_Smooth_Homicide_Rate.png" alt="Figura_Not_Smooth_Homicide_Rate" />
+        <figcaption>Image 1 - Not Smooth Homicide Rate</figcaption>
     </figure>
     <figure>
-        <figcaption>Image 2 - Smooth Homicide Rate</figcaption>
         <img src="/images/Figura_Smooth_Homicide_Rate.png" alt="Figura_Smooth_Homicide_Rate" />
+        <figcaption>Image 2 - Smooth Homicide Rate</figcaption>
     </figure>
 </div>
 
