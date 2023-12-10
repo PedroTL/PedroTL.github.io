@@ -9,7 +9,7 @@ collection: portfolio
 
 The goal of this post is to present the main aspects of geocoding process of the families in the Single Registry of Campinas-SP, including the objectives, methodology, and results. The full version is available in Portuguese, and the content was adapted to a portfolio post structure, emphasizing the key points and bringing out the main results.
 
-[Full sstudy available in portuguese]()
+[Full study available in portuguese](https://feac.org.br/wp-content/uploads/2023/10/Geocodificacao_FEAC.pdf?portfolioCats=3105#new_tab)
 
 ## Introduction
 
