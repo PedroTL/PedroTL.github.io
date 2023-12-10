@@ -3,6 +3,7 @@ title: "Determinants of Crime in Brazilian Southeast: Applications of Spatial Ec
 excerpt: "Final thesis project about the determinants of crime in the Brazilian Southeast with applied Spatial Econometrics <br/><img src='/images/Figura_LISA_500_300.png'>"
 collection: portfolio
 ---
+<style>body {text-align: justify}</style>
 
 ## Overview
 
