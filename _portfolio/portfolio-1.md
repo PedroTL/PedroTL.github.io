@@ -1,6 +1,6 @@
 ---
 title: "Geocoding Families of the Single Registry in Campinas-SP"
-excerpt: "Geocoding methodological process for the families in the Single Registry of Campinas-SP, the result of the Social Territory Diagnosis project <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
+excerpt: "Geocoding methodological process for the families in the Single Registry of Campinas-SP, the result of the Social Territorial Diagnosis project <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
 collection: portfolio
 ---
 <style>body {text-align: justify}</style>
