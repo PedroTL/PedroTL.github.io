@@ -1,6 +1,6 @@
 ---
 title: "Geocoding Families of the Single Registry in Campinas-SP"
-excerpt: "Geocoding methodological process for the families in the Single Registry of Campinas-SP <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
+excerpt: "Geocoding methodological process for the families in the Single Registry of Campinas-SP, the result of the Social Territory Diagnosis project <br/><img src='/images/1-Map-Geocoding_500_300.png'>"
 collection: portfolio
 ---
 <style>body {text-align: justify}</style>
@@ -16,8 +16,6 @@ The goal of this post is to present the main aspects of geocoding process of the
 Any institution that aims to contribute to social transformation wonders what information to collect and how best to read the territory, especially the social vulnerability of its population. At the intra-municipality level, the main source of data is the Demographic Census, which still has huge expectations surrounding the release of microdata and data aggregated by census tract. Even though it is an essential and irreplaceable source, the decennial period imposes the challenge of seeking alternatives that allow more frequent readings and are therefore adherent to the eternally changing social situation.
 
 With this goal, the two institutions, FEAC Foundation and Pontifical Catholic University of Campinas Observatory, started to invest in the treatment and analysis of the Single Registry (CadÚnico), which, according to the Secretary for Assessment, Information Management and Single Registry, consists of the identification and socioeconomic characterization of low-income Brazilian families, recording information on household characteristics, education, family composition, work, and income, among others. It is worth mentioning that its use for study and research purposes is regulated by decree and requires ethical demands to be met in handling information.
-
-[Full study available in portuguese](https://feac.org.br/wp-content/uploads/2023/10/Geocodificacao_FEAC.pdf?portfolioCats=3105#new_tab)
 
 ## Methodology
 
