@@ -197,7 +197,7 @@ $$y = x \beta + u$$
 
 $$u = \lambda Wu + \varepsilon |\lambda|$$
 
-$$u = u = \lambda Wu + \xi$$
+$$u = \lambda Wu + \xi$$
 
 An example would be the study of crime in an area that would be influenced not only by its factors but also by crime in neighboring regions. In this way, the model captures the spatial correlation through error terms.
 
