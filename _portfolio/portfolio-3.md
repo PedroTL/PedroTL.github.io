@@ -102,7 +102,7 @@ Table 2 shows the MRC's exports for the month of **June 2022**, aggregated accor
 
 Exports increase and decrease in different complexity categories. Low complexity saw a drop of **- 17.64%**; medium-low complexity saw an increase of **18.09%**; medium-high complexity saw an increase of **52.93%**; and high complexity saw an increase of **24.63%**. However, more than **77.56%** of the region's exports were concentrated in medium-high and high complexity products.
 
-Table 3 shows the MRC's imports for the month of June 2022, aggregated according to the degree of economic complexity of the imported products.
+Table 3 shows the MRC's imports for the month of **June 2022**, aggregated according to the degree of economic complexity of the imported products.
 
 **Table 3 - Degree of Complexity of Imports: Comparison between Jun/2022 and Jun/2021, values in millions of USD.**
 
@@ -156,7 +156,7 @@ Table 5 shows the value exported of the main products on the regional list in th
 
 The products in Table 5 account for approximately **38.36%** of total exports for the year. There was an increase in the value exported for all the main regional product groups.
 
-Table 6 shows the value of imports of the main products in the regional tariff for the year as a whole, as well as the variation in relation to the same period in the previous year.
+Table 6 shows the value of imports for the main products in the region for the year as a whole, as well as the variation in relation to the same period in the previous year.
 
 **Table 6 - Main products imported by the MRC in 2022 (values in millions of USD/FOB).**
 
@@ -175,7 +175,7 @@ Table 6 shows the value of imports of the main products in the regional tariff f
 
 The products listed in Table 6 account for approximately **47.1%** of the RMC's imports in **2022**. There was an increase in imports of almost all products, except for vehicle parts and accessories and machinery parts and accessories.
 
-Assuming that imports are related to the economic activities of the chains in front of the products considered, there is evidence of an increase in activity for all sectors except automobiles and machinery. It is important to note that during this period there was a large increase in the prices of many imported inputs, increasing the value of imports due to the price effect rather than the quantity effect.
+Assuming that imports are related to the economic activities of the chains in front of the products considered, there is evidence of an increase in activity for all sectors except automobiles and machinery. It is important to note that during this period there was a large increase in the prices of many imported goods, increasing the value of imports due to the price effect rather than the quantity effect.
 
 Table 7 shows exports to the 10 main destinations in the MRC, accumulated for 2022, as well as the variation in exports by destination compared to 2021.
 
@@ -196,7 +196,7 @@ Table 7 shows exports to the 10 main destinations in the MRC, accumulated for 20
 
 There was an increase in exports to all the main destinations. Noteworthy is the significant growth in exports to Argentina, the United States, China, and Mexico and a drop in exports to Belgium when compared to **2021**. It should be noted, however, that the poor performance of the base year favors the positive result. Table 8 shows the data for the 10 main origins of the MRC imports, accumulated for **2022**, as well as the variation in imports by origin compared to **2021**. 
 
-**Table 8 - Origin of RMC Imports (values in millions of dollars FOB accumulated in 2022). **
+**Table 8 - Origin of RMC Imports (values in millions of dollars FOB accumulated in 2022).**
 
 | Countries | Imp. 22 | % Imp. 222 | Var. 21/22 |
 | :---: | :---: | :---: | :---: |
