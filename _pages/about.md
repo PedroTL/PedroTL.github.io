@@ -70,7 +70,7 @@ Instructors of the Academic Week workshop. The aim is to share the process of ge
 
 ## Talks & Lectures
 
-- IV Fórum do Observatório PUC-Campinas. 2023. [Encontro].
+- IV Fórum do Observatório PUC-Campinas. 2023. [Meeting].
 - Academic Week at Pontifical Catholic University of Campinas University. Geocoding of the Single Regristy Families. 2023. [Exhibition](https://drive.google.com/file/d/1A0jvTvv9-1QJMUhVJcPWKSG7ejmmY03D/view?usp=sharing).
 - Annual Extension Meeting of the Pontifical Catholic University of Campinas Observatory: Productive Structure and Regional Socioeconomic Development. 2022. [Meeting](https://drive.google.com/file/d/1DZ-FjKGwzFQF7h89__iNQDeGrHK6U2_w/view?usp=sharing).
 
