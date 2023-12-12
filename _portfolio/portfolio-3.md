@@ -1,6 +1,6 @@
 ---
 title: "Monthly Trade Balance Report - Metropolitan Region of Campinas (MRC)"
-excerpt: "Structure of the monthly trade balance report, one of the products of the Productive Structure and Socioeconomic Development extension project <br/><img src='/images/Trade_Balance_500_300.png'>"
+excerpt: "Structure of the monthly trade balance report, one of the products of the Productive Structure and Socioeconomic Development extension project <br/><img src='/images/Trade_Balance_500_300.jpg'>"
 collection: portfolio
 ---
 <style>body {text-align: justify}</style>
