@@ -9,7 +9,7 @@ collection: portfolio
 
 The goal of this post is to present the main aspects of my final thesis, including the objectives, theoretical framework, literature review, methodology, and results. The full version is available in Portuguese and the content was adapted to a portfolio post structure, emphasizing the key points and bringing out the main results.
 
-[Full study available in portuguese]()
+[Full study available in portuguese](https://drive.google.com/file/d/1fSQSptjXfrpgkqjSmZh3JYRnoRwSEXrv/view?usp=sharing)
 
 ## Abstract
 
@@ -102,9 +102,8 @@ The study starts with the construction of a model based on the main variables ch
 
 One main problem in selecting the independent variables is that even after the creation of a category-based filter, there are still many variables that might explain the variability of the homicide rate. Because of that, a stepwise regression was built based on a selection of independent variables. In general terms, stepwise regression is a technique that starts with a complete model and, at each step, gradually eliminates independent variables from the regression model.
 
-The final model provided the best fit, although manual alterations were needed to deal with multicollinearity. Mostly, two variables selected in the stepwise regression were removed: the HDI index and the income HDI index. The dependent variable was transformed to log, being chosen as the best fit in the stepwise regression. The final independent variables can be seen in Table 1 alongside the main category they fall into.
+The final model provided the best fit, although manual alterations were needed to deal with multicollinearity. Mostly, two variables selected in the stepwise regression were removed: the HDI index and the income HDI index. The dependent variable was transformed to log, being chosen as the best fit in the stepwise regression. The final independent variables can be seen in Frame 1 alongside the main category they fall into and the expected impact.
 
-Frame 2 presents the main variables and the expected impact that they will have on the log-smoothed homicide rate (100 thousand people). 
 
 <div class="figure" style="text-align: center">
     <p class="title">Frame 1: Independent Variables and Expected Impact</p>
@@ -113,7 +112,7 @@ Frame 2 presents the main variables and the expected impact that they will have 
 </div>
 <br>
 
-The results of the OLS model are shown in Table 2.
+Table 2 presents the results of the OLS model, taking as the dependent variable the log-smoothed homicide rate (100 thousand people), with the independent variables being as shown in Frame 1.
 
 <div class="figure" style="text-align: center">
     <p class="title">Table 2: Results of OLS</p>
@@ -132,6 +131,13 @@ The main factor is that heteroscedasticity (residuals have unequal variance) vio
 
 The choice of the neighboring matrix is a key step in spatial regression because it is a mathematical way to express who is and who is not the neighbor for a given region. There are many ways to represent the neighboring matrix; in this study, the queen contiguity of order one was used. Exemplified by chess, we have that in the queen contiguity method, all adjacent polygons, including those found at the vertices, are considered neighbors. They are also given proportional weight to each neighbor; Figure 2 brings out the main idea.
 
+<div class="figure" style="text-align: center">
+    <p class="title">Figure 2: Neighboring matrix</p>
+    <span id="fig:img-with-knitr"></span>
+    <img src="/images/tab9.png" alt="Figure 2: Neighboring matrix" width="70%"/>
+</div>
+<br>
+
 ### Spatial Autocorrelation - Moran I and LISA
 
 After the construction of the OLS model and the confirmation that the proposed relationship holds statistical significance while the impacts fall under the imposed hypotheses, the process begins to identify if there is any Spatial Autocorrelation.
@@ -141,7 +147,7 @@ Spatial Correlation refers to the strength of the association between cases and 
 The standard deviation of the residuals is used as a visualization method; it indicates how much the data differs from the mean. In this case, each standard deviation becomes a category in the choropleth map that can be visualized in Figure 3.
 
 <div class="figure" style="text-align: center">
-    <p class="title">Figure 2: Model Residuals</p>
+    <p class="title">Figure 3: Model Residuals</p>
     <span id="fig:img-with-knitr"></span>
     <img src="/images/Figura_Residuals.png" alt="Figure 3: Model Residuals" width="70%"/>
 </div>
@@ -169,9 +175,9 @@ In general, it is possible to identify areas where the log-smoothed homicide rat
 The representation Figure 4 shows the categories and specifies the clusters in regions where the Moran location test obtained statistical significance at a p-value < 0.1.
 
 <div class="figure" style="text-align: center">
-    <p class="title">Figure 3: Local Indicator of Spatial Association (LISA)</p>
+    <p class="title">Figure 4: Local Indicator of Spatial Association (LISA)</p>
     <span id="fig:img-with-knitr"></span>
-    <img src="/images/Figura_LISA.png" alt="Figure 3: Local Indicator of Spatial Association (LISA)" width="70%"/>
+    <img src="/images/Figura_LISA.png" alt="Figure 4: Local Indicator of Spatial Association (LISA)" width="70%"/>
 </div>
 <br>
 
@@ -183,7 +189,7 @@ The Spatial Lag (SAR) is similar to the OLS but adds a lagged version of the dep
 
 $$y = \rho Wy + x\beta + u$$
 
-Where the values of neighbors $y$ that have the weight of the spatial matrix $W$ are multiplied by $\rho$, representing the autoregressive coefficient for the dependent variable. While $\rho$ expresses the strength of the spatial autocorrelation presented in the dependent variable.
+Where the values of neighbors $y$ that have the weight of the spatial matrix $W$ are multiplied by $\rho$ representing the autoregressive coefficient for the dependent variable. While $\rho$ expresses the strength of the spatial autocorrelation presented in the dependent variable.
 
 In this case, the estimate of $y$ depends on $x\beta$ and $\rho W$; therefore, the interpretation of $x \beta$ is not the same as in the OLS, as we consider the spatial effect for the variable $y$ in the neighborhood matrix.
 
@@ -245,7 +251,7 @@ We have that the change of $i_{th}$ predictor municipalities can affect the resu
 The present work aimed to analyze the determinants of crime in southeastern Brazil, using Becker's theoretical framework (1968) and a review of similar studies for the process of choosing variables for the determinants of crime.
 Econometric modeling and application of Exploratory Spatial Data Analysis (AEDE) tools and methodologies were used to create and estimate the models, observing the impact of the variables and considering the spatial component.
 
-It was evident that for this structure analysis, considering cross-section data from the year 2010 at the municipal level for southeastern Brazil in both dependent and independent variables, the addition of the spatial component does not fully support the hypothesis explained in the OLS model. The interpretative results of Spatial Lag are shown in Table 6.
+It was evident that for this structure analysis, considering cross-section data from the year 2010 at the municipal level for southeastern Brazil in both dependent and independent variables, the addition of the spatial component does not fully support the hypothesis explained in the OLS model. The interpretative results of Spatial Lag are shown in Frame 2.
 
 <div class="figure" style="text-align: center">
     <p class="title">Frame 2: Interpretation of Spatial Lag (SAR)</p>
