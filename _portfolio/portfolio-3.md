@@ -64,7 +64,7 @@ Trade Balance July
 
 Table 1 shows the MRC's trade balance data for the months of June between 2012 and 2022.
 
-**Table 1: Trade Balance of The MRC for the Months of June (values in millions of USD/FOB)**<br>
+**Table 1 - Trade Balance of The MRC for the Months of June (values in millions of USD/FOB)**<br>
 
 | Month/Year <br> | Exp. value | $\%$ Exp. SP | Imp. value | $\%$ Imp. SP | RMC Balance | Balance SP |
 | :---:  | :---:  | :---: | :---: | :---: | :---: | :---: |
