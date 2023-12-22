@@ -60,7 +60,7 @@ Developed in collaboration with FEAC foundation analysts and researchers from th
 Driven by my interest in GIS and spatial data analysis, I was one of the instructors for a two-day workshop entailing the process of geocoding and map making in the R language.
 
 ### Monthly Foreign Trade Report of the Metropolitan Region of Campinas (MRC)
-[Full Study](https://observatorio.puc-campinas.edu.br/informativo-mensal-balanca-comercial-da-regiao-metropolitana-de-campinas-volume-5-n-06-2022/)
+[Full Study](https://observatorio.puc-campinas.edu.br/informativo-mensal-balanca-comercial-da-regiao-metropolitana-de-campinas-volume-5-n-06-2022/)<br>
 [Portifolio Publication](https://pedrotl.github.io/portfolio/portfolio-3/)
 
 Monthly Foreign Trade Report of the Metropolitan Region of Campinas (MRC), generated using an automated workflow in RMarkdown. This report contains vital data on exports and imports, including the trade balance, presented with both yearly and monthly comparisons. It elaborates on the complexity of exported and imported goods, making it a valuable tool for decision-makers in industrial and public sectors.
