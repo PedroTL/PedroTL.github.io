@@ -121,6 +121,7 @@ Table 2 presents the results of the OLS model, taking as the dependent variable 
 </div>
 <br>
 
+
 The model falls into the expected results, with all variables with the anticipated sign being statistically significant the same as the model, and the independent variables explain 13% of the variability of the dependent variable. The model also doesn't present a problem with multicollinearity, with all variables having $VIF < 2.60$.
 
 The OLS model brings the first idea, and if it is possible to continue the investigation about spatial autocorrelation, the OLS uses squared errors as the basis for estimating the coefficients; however, the regression assumes that these residuals have constant variance (homoscedasticity). In the case of data with Spatial Autocorrelation, the errors may not be stochastic (random), thus existing patterns of association between nearby regions.
