@@ -1,0 +1,711 @@
+---
+title: "Monthly Trade Balance Report - Metropolitan Region of Campinas (MRC)"
+excerpt: "A <br/><img src='/images/Trade_Balance_500_300.jpg'>"
+collection: portfolio
+output: 
+  html_document:
+    code_folding: show
+    toc: yes
+    toc_depth: 2
+    number_sections: no
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+---
+
+<style>body {text-align: justify}</style>
+
+# 1. Introduction
+
+The global derivatives marketplace presents a wealth of trading opportunities, where derivatives function as securitized contracts contingent upon one or more underlying assets. A pivotal factor linked to these transactions is the risk, representing the potential for partial or complete loss of profits and investment returns due to external market factors. Paradoxically, risk can also signify opportunities, so a good understanding of the market trends are vital to make good decisions.
+
+The most commonly known contracts are the futures and options. Futures contracts entail standardized agreements for the purchase and sale of financial instruments or physical commodities on a future exchange for delivery at a later date. In the other hand, options grant the holder the right, but not the obligation, to buy or sell a futures contract at a specific price within a designated time frame. This flexibility enables individuals to navigate business and financial, making it possible to capitalize within the fluctuations of the market.
+
+This report delves into the analysis of a data from future closing prices across a selected group of commodities. The primary objective is to comprehend the key market relationships among these commodities, offering insights and tools for managing spreads, providing a clearer understanding of associated risks.
+
+To make this possible, the structure was split in two sessions. The first will deal with an Exploratory Data Analysis (EDA) trough Multivariate Analysis, mainly using the Principal Component (PC). This technique is useful when dealing with numerous interlinked variables, allowing to uncover inherent patters and correlation. The final session entailed the relationships found in the Principal Component Analysis, interpreting and providing insights about five main categories found relevant, shown in Table 1.
+
+<br>
+<div style="text-align:center">
+  <img src="C:/Users/pedro/Desktop/internship/Categories.png" style="width:70%; height:90%;">
+  <p style="margin-top: 5px;">Table 1: Commodities Categories and Studied Relationships</p>
+</div>
+<br>
+
+# 2. Statistical Analysis: Identifying Relationships in Commodity Prices
+
+This section delves into the methodological application of Principal Component Analysis (PCA) to discern primary relationships within a data set encompassing commodities closing future prices from December 2018 to December 2023.
+
+Time series analysis often grapples with significant challenges like high correlation attributed, seasonal fluctuations, and inherent trends. To address these complexities, a methodological approach, as referenced from James Ming, was adopted. This involved transforming the data set from daily prices into logarithmic returns, thus shortening each series by a single day.
+
+These pre-processing steps are fundamental in preparing the time series data for analysis, particularly in the context of Unsupervised Machine Learning and clustering algorithms, being relevant to financial data sets.
+
+<br>
+
+## 2.1 Unconditional, Time-Invariant Correlations Among Commodity Returns
+
+```{r, warning = FALSE, message = FALSE, class.source = "fold-show"}
+# Loading Packages
+pacman::p_load(openxlsx, dplyr, ggplot2, tidyr, scales, DataExplorer, factoextra, FactoMineR, sjPlot, plotly, htmlwidgets, ggcorplot, rstatix, heatmaply, install = TRUE)
+
+# Loading Data and Transforming Prices to Fit CME and ICE and Create Spread Measures
+price_1 <- read.xlsx("C:\\Users\\pedro\\Desktop\\internship\\project.xlsx", sep.names = " ", detectDates = TRUE) |>
+  mutate(`Heating Oil` = (`Heating Oil` / 100), 
+         `Corn` = (`Corn` / 100),
+         `Soybean Crush Spread in US$` = ((`Soybean Meal` * 0.022) + ((`Soybean Oil`/100) * 11) - (`Soybean`/100)),
+         `Oil Crush Spread` = ((`Heating Oil` * 42) - `Brent Crude`),
+         `Spread Wheat` = (`Wheat Kansas` - `Wheat Chicago`),
+         `Cattle Crush` = ((6 * 400 * `Live Cattle`) - (3 * 500 * `Feeder Cattle`) - (2 * 5000 * `Corn`)) / 1000) |>
+    drop_na()
+
+price_2 <- price_1 %>%
+  mutate_at(2:15, ~ c(NA, diff(log(.)))) %>% # Log Returns
+  mutate(across(-1, ~ ifelse(is.finite(.), ifelse(is.na(.), 0, .), 0))) # Working with Inf Values
+```
+
+The Unconditional time-invariant, showcased through a correlation matrix, serve as a good first step into analysis. This approach allows for the exploration of relationships between various commodities returns, regardless of temporal fluctuations. By capturing long-term associations, it unveils underlying patterns, dependencies, and interdependence, offering valuable insights into how different commodities relate to each other over time. This method facilitates a deeper understanding of market dynamics and aids in risk assessment, portfolio diversification, and strategic decision-making within commodity trading.
+
+<br>
+
+```{r, warning = FALSE, message = FALSE}
+# Correlation Matrix (Test, Not Used)
+figure1 <-
+  sjp.corr(price_1[,2:15],
+         corr.method = "pearson",
+         show.values = TRUE,
+         show.legend = TRUE) + 
+  scale_fill_gradientn(colours = colorRampPalette(rev(RColorBrewer::brewer.pal(11, "RdYlBu")))(100)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, face = "bold"),
+        axis.text.y = element_text(face = "bold"))
+```
+
+```{r, warning = FALSE, message = FALSE}
+# Coefficient 
+cor.coef <- cor(price_2[,2:15])
+
+# Correlatip p-values
+cor.test.p <- function(x){
+    FUN <- function(x, y) cor.test(x, y)[["p.value"]]
+    z <- outer(
+      colnames(x), 
+      colnames(x), 
+      Vectorize(function(i,j) FUN(x[,i], x[,j]))
+    )
+    dimnames(z) <- list(colnames(x), colnames(x))
+    z
+}
+
+# Epsilon
+p <- cor.test.p(price_2[,2:15]) + 1e-10 
+
+# HeatMap Plotly
+corr.matrix <- 
+  heatmaply_cor(
+  cor.coef,
+  node_type = "scatter",
+  point_size_mat = -log10(p), 
+  label_names = c("x", "y", "Correlation"),
+  dendrogram = "none",
+)
+```
+
+```{r, width = 800, hight = 700, out.width= "95%", out.height = "100%", fig.cap = "Figure 1: Correlation Matrix", fig.align = "center"}
+corr.matrix
+```
+
+<br>
+
+Figure 1 shows an initial idea of main correlated commodities, where the size of each circle represent the level of statistical significance (p-value) and the color is the correlation between variables. It is visual that hard commodities, specially Heating and Brent Oil are highly related, fallowed by the Soybean products, with moderate relationship. Live and Feeder Cattle confirm an expected association, alongside the soft commodities, here, Wheat can be emphasized trough Kansas and Chicago.
+
+Although this is a good first look at the commodities, a further analysis is recommended, ensuring a more accurate view of the patters that can be secluded in a correlation matrix.
+
+<br>
+
+## 2.2 Principal Component Analysis (PCA)
+
+While the correlation matrix provides an initial glimpse into the relationships among commodities, PCA offers a more comprehensive approach, going beyond the surface-level correlations, uncovering latent patterns and hidden associations within the data. The method transform the original variables into uncorrelated components, it enables a more nuanced understanding of interdependence and structures among commodities.
+
+```{r warning = FALSE, message = FALSE}
+# Data
+pca <- price_2 |>
+  drop_na()
+
+# Covariance
+cov.c <- cov(pca[,2:15])
+
+# Total Variance (Sum of the Main Diagonal)
+# sum(diag(cov.c))
+
+# Generalized Variance
+# det(cov.c)
+
+# Correlation Matrix
+cor.c <- cor(pca[,2:15])
+
+# Total Variances - Sum of Main Diagonal
+var.total <- sum(diag(cor.c))
+
+# Autovalues
+ev <- eigen(cor.c)
+
+# Extracting Auto Values
+c.valores <- ev$values
+c.vetores <- ev$vectors
+
+# Calculating the Explained % for Each Component
+# Auto Values / Total Variance
+per.var <- c((c.valores/var.total)*100)
+```
+
+```{r, warning = FALSE, message = FALSE}
+# Analysis of Components
+res.pca <- PCA(pca[2:15], graph = FALSE)
+```
+
+Principal Component Analysis (PCA) reduces the dimension of data, capturing the most significant patterns. PC1 and PC2 represent the most prominent directions of variance within the data. They explain the highest proportion of the total variance. For instance, the PC1 captures 27.9% of the total variance, and the PC2 captures 12.8%. This means that both components encapsulates about 40% of the overall information from the data.
+
+The Figure 2 shows the PCA Biplot, indicating how much the original variables are correlated with the first two PC. The arrows represent the variables and their relationships with the principal components, while the length and direction of the arrows indicate the strength and direction of the relationship. A longer arrow signifies greater importance of that variable to the component. The direction of the arrow indicates how much that variable contributes to PC1 or PC2. An arrow closer to the horizontal axis implies higher relevance to PC1, while proximity to the vertical axis indicates more significance for PC2. Finally, the quadrants denote groups of variables that behave similarly based on their directions and positions, so Variables in the same quadrant share similar patterns and tendencies.
+
+<br>
+<div style="text-align:center">
+  <img src="C:/Users/pedro/Desktop/internship/figure2.png" style="width:60%; height:80%;">
+  <p style="margin-top: 5px;">Figure 2: PCA Biplot - Commodities and Relationship</p>
+</div>
+<br>
+
+To measure the quality of the representation, there are a couple of ways. The Kaiser's Rule, keeps the components with eigenvalues grater than 1. In simple terms, an eigenvalue represents the variance explained by a component, in this case, when it is grater than 1, the component explains more variance than an average variable. The analysis indicates that the PC 12 with a value of 1.76 was the last one, being grater than one. 
+
+The other way is the Scree Plot, known as the Elbow Point, indicating the spot where the eigenvalues start to level off. This helps decide how many components should be retained. Figure 3 indicates that the second to third component could be suitable for the analysis.
+
+```{r, warning = FALSE, message = FALSE}
+# figure3 <- 
+#   fviz_eig(res.pca, 
+#          addlabels = TRUE,
+#          xlab = "Dimension",
+#          ylab = "Explained Variance (%)",
+#          ggtheme = theme_bw())
+
+# Extracting Data For Plotly
+plotly_elbow <- as.data.frame(get_eig(res.pca))
+plotly_elbow$PC <- rownames(plotly_elbow)
+plotly_elbow <- plotly_elbow[1:5, ]
+
+# Plotly
+p_elbow <- plot_ly()
+
+# Explained Variance Bar
+p_elbow <- add_trace(p_elbow, name = "Explained Variance", type = "bar",
+                     x = plotly_elbow$PC, y = plotly_elbow$variance.percent,
+                     text = paste(round(plotly_elbow$variance.percent, 2), "%", sep = "")) 
+
+# Cumulative Explained Variance Line + Scatter
+p_elbow <- add_trace(p_elbow, name = "Cumulative Explained Variance", type = "scatter",
+                     x = plotly_elbow$PC, y = plotly_elbow$cumulative.variance.percent,
+                     text = paste(round(plotly_elbow$cumulative.variance.percent, 2), "%", sep = ""),
+                     mode = "lines+markers+text",
+                     textposition = "top",
+                     textfont = list(color = "black", size = 12))  # Adjust text font and color as needed
+
+# Layout
+p_elbow <- layout(p_elbow, title = "", yaxis = list(title = "Explained Variance %"), width = 900, height = 600)
+
+# Saving
+# saveWidget(p_elbow, file = "C:\\Users\\pedro\\Desktop\\internship\\p_elbow.html")
+# ggsave("C:\\Users\\pedro\\Desktop\\internship\\figure3.png", plot = figure3, width = 10, height = 8, dpi = 300, bg = "white" )
+```
+
+```{r, width = 900, hight = 600, out.width= "100%", out.height = "100%", fig.cap = "Figure 3: Scree Plot", fig.align = "center"}
+p_elbow
+```
+
+<br>
+
+For the sake of simplicity and the goal to find the main relationships between the commodities, the contribution of the variables to the PC can be seen by the correlation between the original variables and the components in question. Figure 4 shows the result, variables with a higher level of correlation can imply that they are more important in the explanation of the data variability.
+
+```{r, warning = FALSE, message = FALSE}
+figure4 <-
+  factoextra::fviz_pca_var(res.pca,
+            col.var = "cos2",
+            gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+            repel = TRUE)
+
+# ggsave("C:\\Users\\pedro\\Desktop\\internship\\figure4.png", plot = figure4, width = 10, height = 8, dpi = 300, bg = "white" )
+```
+
+<br>
+<div style="text-align:center">
+  <img src="C:/Users/pedro/Desktop/internship/figure4.png" style="width:83%; height:80%;">
+  <p style="margin-top: 5px;">Figure 4: PCA Biplot - Correlation Streght</p>
+</div>
+<br>
+
+In sum, the analysis shows that the hard commodities, like Oil products, present close relationship, similar to Wheat Kansas and Chicago. The livestock complex tends to stay together, fallowed by the soft commodities, such as coffee, cotton, sugar, although with a lower impact in the provided data. Finally, the soybean related products show similar impact and by logic are also connected. The next topic will provide a better understanding of the relationships found with in the financial marketplace.
+
+<br>
+
+# 3. Spread and Relationships in the Financial Marketplace
+
+This session entailed a better understanding of relationships found in the Exploratory Data Analysis (EDA). The goal is to provide, with visualization, the interpretation of the main spreads within the market. It will be analyzed the Crack Spread in the Oil sector and the Crush Spread, present in both Soybean and Livestock market. Finally, the dynamics between the Kansas and Chicago Wheat are also shown alongside the other soft commodities.
+
+## 3.1 Crack Spread in the Oil Market
+
+The crack spread serves as a theoretical measure of refining margin. A positive value indicates higher prices for refined products than crude oil, leading to a profitable margin. Calculating this spread becomes slightly complex due to varying units assigned to Crude Oil (Brent Crude) and Heating Oil (HO). Converting them into a common unit (gallons) involves adjusting HO prices by multiplying them by 42, as 1 barrel equals 42 gallons. The Figure 4 depicts the relationship between Brent Crude and Heating Oil future closing prices, along with the Crack Spread in US$.
+
+```{r, warning = FALSE, message = FALSE}
+# Calculate moving averages for each variable
+price_1 <- 
+  price_1 %>%
+  mutate(`Brent Crude_MA` = zoo::rollmean(`Brent Crude`, k = 28, fill = NA),
+         `Heating Oil_MA` = zoo::rollmean(`Heating Oil` * 100, k = 28, fill = NA))
+
+# Create subplot for Brent Crude and its moving average
+plot_brent <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Brent Crude`) %>%
+  add_lines(name = "Brent Crude", type = "scatter", mode = "lines", line = list(color = "lightgreen")) %>%
+  add_lines(y = ~`Brent Crude_MA`, name = "Brent Crude (28-day MA)", type = "scatter", mode = "lines", line = list(color = "darkgreen"))
+
+# Create subplot for Heating Oil and its moving average
+plot_heating_oil <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Heating Oil` * 100) %>%
+  add_lines(name = "Heating Oil", type = "scatter", mode = "lines", line = list(color = "lightblue")) %>%
+  add_lines(y = ~`Heating Oil_MA`, name = "Heating Oil (28-day MA)", type = "scatter", mode = "lines", line = list(color = "blue"))
+
+# Create subplot for Oil Crush
+plot_oil_crush <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Oil Crush Spread`) %>%
+  add_lines(name = "Oil Crack Spread", type = "scatter", mode = "lines", line = list(color = "red"))
+
+# Create subplot using subplot function
+subplot_fig_oil <- subplot(plot_brent, plot_heating_oil, plot_oil_crush, nrows = 3, shareX = TRUE) %>%
+  layout(
+    title = "",
+    showlegend = TRUE,
+    height = 900,  # height of the subplot
+    margin = list(t = 100),  # margin for the title
+xaxis = list(
+      rangeselector = list( # Buttons
+        buttons = list(
+          list(
+            count = 3,
+            label = "3 mo",
+            step = "month",
+            stepmode = "backward"),
+          list(
+            count = 6,
+            label = "6 mo",
+            step = "month",
+            stepmode = "backward"),
+          list(
+            count = 1,
+            label = "1 yr",
+            step = "year",
+            stepmode = "backward"),
+          list(
+            count = 1,
+            label = "YTD",
+            step = "year",
+            stepmode = "todate"),
+          list(step = "all"))),
+
+      rangeslider = list(type = "date")),
+
+    yaxis = list(title = "Price"))
+
+# saveWidget(subplot_fig, file = "C:\\Users\\pedro\\Desktop\\internship\\p1_oil.html")
+```
+
+```{r, width = 1000, hight = 900, out.width= "100%", out.height = "100%", fig.cap = "Figure 5: Subplot for Brent Crude, Heating Oil, and Oil Crush Spread", fig.align = "center"}
+subplot_fig_oil
+```
+
+Crack Spread values tend to vary with seasons. During summer, demand for unleaded gasoline outpaces Heating Oil (HO), while in winter, the situation is reversed. When the spread is too narrow for profitable refining, product prices need to rise to align with Crude Oil prices. This scenario favors Heating Oil (HO) and gasoline contracts over Crude Oil. Conversely, substantial price gaps between products and Crude Oil signal increased production and sales of gasoline and Heating Oil (HO) by refiners to maximize profits. This surge in sales often drives product prices down, favoring Crude Oil over Heating Oil and gasoline.
+
+Hedging price risk and trading Crack Spread are strategies aimed at protecting and potentially enhancing profits. Hedging price risk involves refiners purchasing futures contracts for crude oil, anticipating an increase in oil prices. Simultaneously, they sell futures contracts for the refined products they produce, like gasoline or heating oil. This strategy aims to offset any potential losses from price changes while aiming to secure a favorable profit margin. 
+
+Trading Crack Spread involves buying the Crack Spread, anticipating a stronger spread, indicating increased refining margins. This occurs when Crude Oil prices drop or demand for refined products rises. Buying refined products futures and selling Crude Futures could be beneficial. Conversely, selling the Crack Spread occurs when a weaker spread is expected, indicating declining refining margins. This happens when demand for refined products weakens or the spread narrows due to oil price changes. Selling refined products futures and buying crude futures might be favorable in such scenarios.
+
+In sum, the analysis of the Crack Spread can provide insights in how to better understand the movements of this particular sector, being looked in how to reduce risk and enhance opportunities.
+
+<br>
+
+## 3.2 Soybean Crushing
+
+Spread trading is a prevalent strategy in grain and oil seed markets, involves simultaneously buying and selling two distinct contracts. Specifically, in the soybean market, the crush spread is widely utilized. It gauges the disparity between the value of soybeans and that of its processed byproducts, acting as a gauge for potential profit margins in soybean processing.
+
+In the board crush approach, traders adopt a long position in Soybean futures while taking short positions in Soybean Meal and Soybean Oil futures. The crush value is determined by adding the Soybean Oil futures price to the Soybean Meal futures price and then subtracting the Soybean futures price. Since these commodities are traded in varying units - bushels, tons, and pounds, an accurate calculation entails converting their prices into a common unit. Given that a bushel of soybeans typically weighs around 60 pounds, the Soybean futures price, quoted per bushel, can be interpreted as the price per 60 pounds of soybeans, the formula below shows the calculation process of Soybean Crushing. 
+
+```{r, warning = FALSE, message = FALSE}
+# Calculate moving averages for each variable
+price_1 <- 
+  price_1 %>%
+  mutate(`Soybean_MA` = zoo::rollmean(`Soybean`, k = 28, fill = NA),
+         `Soybean Oil_MA` = zoo::rollmean(`Soybean Oil`, k = 28, fill = NA),
+         `Soybean Meal_MA` = zoo::rollmean(`Soybean Meal`, k = 28, fill = NA))
+
+# Create subplot for Soybean and its moving average
+plot_soybean <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Soybean`) %>%
+  add_lines(name = "Soybean", type = "scatter", mode = "lines", line = list(color = "lightgreen")) %>%
+  add_lines(y = ~`Soybean_MA`, name = "Soybean (28-day MA)", type = "scatter", mode = "lines", line = list(color = "darkgreen"))
+
+# Create subplot for Soybean Oil and its moving average
+plot_soybean_oil <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Soybean Oil`) %>%
+  add_lines(name = "Soybean Oil", type = "scatter", mode = "lines", line = list(color = "lightblue")) %>%
+  add_lines(y = ~`Soybean Oil_MA`, name = "Soybean Oil (28-day MA)", type = "scatter", mode = "lines", line = list(color = "blue"))
+
+# Create subplot for Soybean Meal and its moving average
+plot_soybean_meal <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Soybean Meal`) %>%
+  add_lines(name = "Soybean Meal", type = "scatter", mode = "lines", line = list(color = "lightyellow")) %>%
+  add_lines(y = ~`Soybean Meal_MA`, name = "Soybean Meal (28-day MA)", type = "scatter", mode = "lines", line = list(color = "yellow"))
+
+# Create subplot for Soybean Crush
+plot_soybean_crush <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Soybean Crush Spread in US$`) %>%
+  add_lines(name = "Soybean Crush", type = "scatter", mode = "lines", line = list(color = "red"))
+
+# Create subplot using subplot function
+subplot_fig_soybean <- subplot(plot_soybean, plot_soybean_oil, plot_soybean_meal, plot_soybean_crush, nrows = 4, shareX = TRUE) %>%
+  layout(
+    title = "",
+    showlegend = TRUE,
+    height = 900,  # height of the subplot
+    margin = list(t = 100),  # margin for the title
+xaxis = list(
+      rangeselector = list(
+        buttons = list( # Buttons
+          list(
+            count = 3,
+            label = "3 mo",
+            step = "month",
+            stepmode = "backward"),
+          list(
+            count = 6,
+            label = "6 mo",
+            step = "month",
+            stepmode = "backward"),
+          list(
+            count = 1,
+            label = "1 yr",
+            step = "year",
+            stepmode = "backward"),
+          list(
+            count = 1,
+            label = "YTD",
+            step = "year",
+            stepmode = "todate"),
+          list(step = "all"))),
+
+      rangeslider = list(type = "date")),
+
+    yaxis = list(title = "Price"))
+
+# saveWidget(subplot_fig, file = "C:\\Users\\pedro\\Desktop\\internship\\p1_oil.html")
+```
+
+<br>
+
+$$((Price\ of\ Soybean\ Meal\ (\$/\text{short ton}) \times 0.022) + Price\ of\ Soybean\ Oil\ (\text{¢/lb}) \times 11) - Price\ of\ Soybean\ (\$/bu)$$
+
+<br>
+
+Figure 6 shows the relationship between the prices of the three commodities, entailing the seasonality and fluctuations, fallowed by the Crushing value, providing a better insight that can be used as tool for a better decision-making while trading commodities.
+
+```{r, width = 1000, hight = 1200, out.width= "100%", out.height = "100%", fig.cap = "Figure 6: Subplot for Soybean, Soybean Oil, Soybean Meal and Soybean Crush", fig.align = "center"}
+subplot_fig_soybean
+```
+
+<br>
+
+Similar to the Crack Spread in the Oil market, the Soybean Crush Spread can be a powerful trading strategy, involving simultaneous positions in soybean, soybean oil, and soybean meal futures a trader goes long on soybean futures and short on soybean oil and meal futures. This reflects a view that the costs of processing soybeans are undervalued. If this assumption holds, the spread increases, allowing the trader to profit by buying soybeans (expected to rise in price) and selling soybean oil and meal (expected to decrease in price). The reverse crush spread works oppositely, assuming overvalued processing costs. Here, a trader goes short on soybean futures and long on soybean oil and meal futures, aiming to benefit from declining soybean futures and increasing soybean oil and meal futures.
+
+It is also common for Hedging and Speculating using the Crush Spread. Hedgers, typically involved in producing soybeans and their processed products, use crush spreads to hedge against potential price drops in their products. By trading futures related to their products, they aim to offset potential losses from actual product sales. Speculators, on the other hand, seek market mispricing and employ crush spreads to capitalize on it. Whether utilizing a crush or reverse crush spread, speculators aim to profit from mispricings in soybeans, soybean oil, or soybean meal futures.
+
+<br>
+
+## 3.3 Cattle Crush
+
+The cattle crush is a vital trading strategy focused on cattle derivatives in agricultural commodity markets. It involves positions in live cattle, feeder cattle, and corn futures to manage risks or speculate on cattle-related market movements.
+
+Live Cattle Futures represent future live cattle sales, while Feeder Cattle Futures involve younger cattle sold for further finishing. Corn Futures, as primary cattle feed, impacts cattle feeding costs. The cattle crush strategy combines feeder cattle and corn futures with a calculated ratio against live cattle futures to capitalize on market price relationships.
+
+The live cattle contract is standardized at 40,000 pounds, which effectively represents approximately 30 live cattle, assuming an average weight of around 1,335 pounds per animal upon reaching the market. Conversely, the feeder cattle contract is equivalent to 50,000 pounds, approximately accounting for 67 feeder cattle, considering an average weight of about 750 pounds per head. In this simplified context, the assumed ratio is 2 live cattle to 1 feeder cattle. These feeder cattle need to be fed with corn to attain the suitable market weight. As an approximate estimate, feeding a single feeder steer from 750 pounds to 1,335 pounds requires around 50 bushels of corn. It's important to note that one bushel of corn weighs 56 pounds. Moving to the corn contract, it represents 5,000 bushels (or 280,000 pounds). This quantity of corn adequately accommodates the feeding requirements for roughly 100 feeder cattle.
+
+Figure 7 emphasis the relationship between the commodities fallowed by the Cattle Crush, providing insightful information that can be used to reduce risk and improve trade positions.
+
+```{r, warning = FALSE, message = FALSE}
+# Calculate moving averages for each variable
+price_1 <- 
+  price_1 %>%
+  mutate(`Feeder Cattle_MA` = zoo::rollmean(`Feeder Cattle`, k = 28, fill = NA),
+         `Live Cattle_MA` = zoo::rollmean(`Live Cattle`, k = 28, fill = NA),
+         `Corn_MA` = zoo::rollmean(`Soybean Meal`, k = 28, fill = NA))
+
+# Create subplot for Feeder Cattle and its moving average
+plot_feeder_cattle <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Feeder Cattle`) %>%
+  add_lines(name = "Feeder Cattle", type = "scatter", mode = "lines", line = list(color = "lightgreen")) %>%
+  add_lines(y = ~`Feeder Cattle_MA`, name = "Feeder Cattle (28-day MA)", type = "scatter", mode = "lines", line = list(color = "darkgreen"))
+
+# Create subplot for Live Cattle and its moving average
+plot_live_cattle <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Live Cattle`) %>%
+  add_lines(name = "Live Cattle", type = "scatter", mode = "lines", line = list(color = "lightblue")) %>%
+  add_lines(y = ~`Live Cattle_MA`, name = "Live Cattle (28-day MA)", type = "scatter", mode = "lines", line = list(color = "blue"))
+
+# Create subplot for Corn and its moving average
+plot_corn <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Corn`) %>%
+  add_lines(name = "Corn", type = "scatter", mode = "lines", line = list(color = "lightyellow")) %>%
+  add_lines(y = ~`Corn_MA`, name = "Corn (28-day MA)", type = "scatter", mode = "lines", line = list(color = "yellow"))
+
+# Create subplot for cattle Crush
+plot_cattle_crush <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Cattle Crush`) %>%
+  add_lines(name = "Cattle Crush", type = "scatter", mode = "lines", line = list(color = "red"))
+
+# Create subplot using subplot function
+subplot_fig_cattle <- subplot(plot_feeder_cattle, plot_live_cattle, plot_corn, plot_cattle_crush, nrows = 4, shareX = TRUE) %>%
+  layout(
+    title = "",
+    showlegend = TRUE,
+    height = 900,  # height of the subplot
+    margin = list(t = 100),  # margin for the title
+xaxis = list(
+      rangeselector = list( 
+        buttons = list( # Buttons
+          list(
+            count = 3,
+            label = "3 mo",
+            step = "month",
+            stepmode = "backward"),
+          list(
+            count = 6,
+            label = "6 mo",
+            step = "month",
+            stepmode = "backward"),
+          list(
+            count = 1,
+            label = "1 yr",
+            step = "year",
+            stepmode = "backward"),
+          list(
+            count = 1,
+            label = "YTD",
+            step = "year",
+            stepmode = "todate"),
+          list(step = "all"))),
+
+      rangeslider = list(type = "date")),
+
+    yaxis = list(title = "Price"))
+
+# saveWidget(subplot_fig, file = "C:\\Users\\pedro\\Desktop\\internship\\p1_oil.html")
+```
+
+```{r, width = 1000, hight = 1200, out.width= "100%", out.height = "100%", fig.cap = "Figure 7: Subplot for Feeder Cattle, Live Cattle, Corn and Cattle Crush", fig.align = "center"}
+subplot_fig_cattle
+```
+
+<br>
+
+The cost difference between feeder cattle, corn, and the selling price of live cattle can be used as analytically tools. A positive spread implies profitability, while a negative spread suggests potential losses. Moreover, seasonality plays a pivotal role in the cattle crush. Market demands for cattle and feed (corn) fluctuate throughout the year. For instance, during summer, there's usually a higher demand for feed, particularly corn, as it's a main component in preparing cattle to market weight. Conversely, during winter, demand tends to shift, favoring different types of cattle products.
+
+Understanding seasonal demand fluctuations is important in the decision-making process, enabling predictions about price adjustments and product production changes based on crush spread variations. 
+
+<br>
+
+## 3.4 Dynamic Between Chicago and Kansas Wheat
+
+The Chicago Board of Trade deals with two types of wheat futures: Kansas City Hard Red Winter Wheat (KC HRW) and Chicago Wheat (Chicago SRW), with Soft Red Winter. The Kansas HRW is planted in fall and harvest in spring, growing in cold and snowy plains, commonly used in bread, and baked goods. Chicago SRW on the other hand, have a soft texture due to its higher moister contend and is used in delicate baked goods. The level of protein in the HRD is higher, being historically sold in higher prices than the SRW.
+
+Figure 8 shown the relationship between these two commodities, fallowed by the Spread (Kansas Wheat (HRW) minus Chicago Wheat (SRW)). The spread stays negative from 2019 until late 2021, with the main reason being a supply church for the SRW, related to poor weather in areas where SRW is produces. There is also a trend downwards in the beginning of 2022 because of the geopolitical tensions among Russia and Ukraine.
+
+```{r, warning = FALSE, message = FALSE}
+# Calculate moving averages for each variable
+price_1 <- 
+  price_1 %>%
+  mutate(`Wheat Kansas_MA` = zoo::rollmean(`Wheat Kansas`, k = 28, fill = NA),
+         `Wheat Chicago_MA` = zoo::rollmean(`Wheat Chicago`, k = 28, fill = NA))
+
+# Create subplot for Wheat Kansas and its moving average
+plot_wheat_kansas <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Wheat Kansas`) %>%
+  add_lines(name = "Wheat Kansas", type = "scatter", mode = "lines", line = list(color = "lightgreen")) %>%
+  add_lines(y = ~`Wheat Kansas_MA`, name = "Wheat Kansas (28-day MA)", type = "scatter", mode = "lines", line = list(color = "darkgreen"))
+
+# Create subplot for Wheat Chicago and its moving average
+plot_wheat_chicago <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Wheat Chicago`) %>%
+  add_lines(name = "Wheat Chicago", type = "scatter", mode = "lines", line = list(color = "lightblue")) %>%
+  add_lines(y = ~`Wheat Chicago_MA`, name = "Wheat Chicago (28-day MA)", type = "scatter", mode = "lines", line = list(color = "blue"))
+
+# Create subplot for cattle Crush
+plot_wheat_spread <- price_1 %>%
+  filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28")) %>%
+  plot_ly(x = ~Date, y = ~`Spread Wheat`) %>%
+  add_lines(name = "Wheat Spread", type = "scatter", mode = "lines", line = list(color = "red"))
+
+# Create subplot using subplot function
+subplot_fig_wheat <- subplot(plot_wheat_kansas, plot_wheat_chicago, plot_wheat_spread, nrows = 3, shareX = TRUE) %>%
+  layout(
+    title = "",
+    showlegend = TRUE,
+    height = 900,  # height of the subplot
+    margin = list(t = 100),  # margin for the title
+xaxis = list(
+      rangeselector = list(
+        buttons = list( # Buttons
+          list(
+            count = 3,
+            label = "3 mo",
+            step = "month",
+            stepmode = "backward"),
+          list(
+            count = 6,
+            label = "6 mo",
+            step = "month",
+            stepmode = "backward"),
+          list(
+            count = 1,
+            label = "1 yr",
+            step = "year",
+            stepmode = "backward"),
+          list(
+            count = 1,
+            label = "YTD",
+            step = "year",
+            stepmode = "todate"),
+          list(step = "all"))),
+      rangeslider = list(type = "date")),
+    yaxis = list(title = "Price"))
+
+# saveWidget(subplot_fig, file = "C:\\Users\\pedro\\Desktop\\internship\\p1_oil.html")
+```
+
+```{r, width = 1000, hight = 900, out.width= "100%", out.height = "100%", fig.cap = "Figure 8: Subplot for Wheat Kansas, Wheat Chicago and Wheat Spread", fig.align = "center"}
+subplot_fig_wheat
+```
+
+<br>
+
+One approach involves purchasing a Kansas futures contract, banking on the expectation that the price of Kansas wheat will increase compared to Chicago wheat in the future. However, this approach carries a risk: if the price of Chicago wheat drops or if Kansas experiences a steeper decline, it may result in losses.
+
+Another strategy involves a "spread trade." Here, the focus lies in the difference between the two contracts. By buying Kansas and simultaneously selling Chicago, this trade exploits the gap between Kansas and Chicago prices rather than solely focusing on their individual values.
+
+In summary, if the gap widens, there's a possibility of facing losses. Should the gap revert to its usual range, there's a chance for profits. And if the gap remains unchanged, the trade would neither yield profit nor loss; it would remain neutral.
+
+<br>
+
+## 3.5 Soft Commodities
+
+Soft commodities refer to a specific group of agricultural products that share a common trait—they are grown rather than mined or extracted. Unlike hard commodities such as gold, silver, or oil, soft commodities encompass a range of goods that are typically grown, harvested, and traded in various global markets. These commodities include products like coffee, cocoa, sugar, cotton, soybean and grains like wheat and corn.
+
+Due to their dependence on natural factors like weather, crop diseases, and geopolitical events, the prices of soft commodities often exhibit volatility and are influenced by numerous global factors, making them a unique segment within the commodities market. Figure 9 shown in a comparable one grid the soft commodities closing future price in US$.
+
+<br>
+
+```{r, warning = FALSE, message = FALSE}
+# Function to Make Graphs 
+make_graph <- function(df, x, y, z) {
+  
+  df_filtered <- df %>%
+    filter(Date >= as.Date("2018-11-28") & Date <= as.Date("2023-11-28"))
+  
+  graph <- plot_ly(df_filtered, type = 'scatter', mode = 'lines', stackgroup = 'one', fillcolor = z) %>%
+    add_trace(x = ~Date, y = df_filtered[[x]], name = x, fillcolor = z, line = list(color = z)) %>%
+    layout(legend = list(title = list(text = 'Commodity')),
+           yaxis = list(title = ''),
+           xaxis = list(title = y))
+  
+  return(graph)
+}
+
+# Arguments, Data, Variable, Date, Color
+plot_commodities_kansas <- make_graph(price_1, "Wheat Kansas", "", "#F09EA9") 
+plot_commodities_chicago <- make_graph(price_1, "Wheat Chicago", "", "#F6CA94")
+plot_commodities_corn <- make_graph(price_1, "Corn", "", "#FAFABE")
+plot_commodities_sugar <- make_graph(price_1, "Sugar", "", "#C1EBC0")
+plot_commodities_coffee <- make_graph(price_1, "Coffee", "", "#C7CAFF")
+plot_commodities_cotton <- make_graph(price_1, "Cotton", "Date", "#CDABEB")
+plot_commodities_soybean<- make_graph(price_1, "Soybean", "Date", "#F6C2F3")
+
+subplot_fig_commodities <- 
+  subplot(plot_commodities_kansas, plot_commodities_chicago, plot_commodities_corn, plot_commodities_sugar, plot_commodities_coffee, plot_commodities_cotton, plot_commodities_soybean,
+               nrows = 7, titleY = TRUE, titleX = TRUE, shareX = TRUE) %>%
+  layout(
+    yaxis = list(title = ''),
+    plot_bgcolor='#e5ecf6',
+    annotations = list(
+      list(x = 0.225, y = 1.0, font = list(size = 10), text = "", xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.775, y = 1, font = list(size = 10), text = "", xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.225, y = 0.64, font = list(size = 10), text = "", xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.775, y = 0.64, font = list(size = 10), text = "", xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.225, y = 0.315, font = list(size = 10), text = "", xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.775, y = 0.315, font = list(size = 10), text = "", xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.225, y = 0.315, font = list(size = 10), text = "", xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE)
+    ),
+        xaxis = list(zerolinecolor = '#ffff',
+                 zerolinewidth = 2,
+                 gridcolor = 'ffff',
+                 rangeselector = list(
+                   buttons = list(
+                     list(count = 3, label = "3 mo", step = "month", stepmode = "backward"),
+                     list(count = 6, label = "6 mo", step = "month", stepmode = "backward"),
+                     list(count = 1, label = "1 yr", step = "year", stepmode = "backward"),
+                     list(count = 1, label = "YTD", step = "year", stepmode = "todate"),
+                     list(step = "all")
+                   )
+                 )
+    )
+  )
+
+subplot_fig_commodities <- subplot_fig_commodities %>%
+  layout(width = 1000, height = 800)
+# saveWidget(subplot_fig, file = "C:\\Users\\pedro\\Desktop\\internship\\p1_oil.html")
+```
+
+```{r, width = 1000, height = 800, out.width= "100%", out.height = "100%", fig.cap = "Figure 8: Subplot for Soft Commodities Closing Future Price in US$", fig.align = "center", warning = FALSE}
+subplot_fig_commodities
+```
+
+<br>
+
+# 4. Conclusions
+
+The main relationships found was in the Oil, Soybean, Livestock and Wheat Market allowing to analyze the Spread and provide insights and tools to improve the decision making while trading.
+
+# 5. References
+
+STOCKCO. KANSAS/CHICAGO – A SPREAD TRADE STRATEGY. Disponível em: https://stockco.co.nz/kansas-chicago-a-spread-trade-strategy/. Acesso em: 27 dez. 2023.
+
+SUTTON-VERMEULEN. Kansas City vs. Chicago Wheat Spread: A Tale of Two Markets. 2020. Disponível em: https://www.cmegroup.com/education/articles-and-reports/kc-vs-chicago-wheat-spread-a-tale-of-two-markets.html. Acesso em: 27 dez. 2023.
+
+CHEN, James. Crush Spread. 2022. Disponível em: https://www.investopedia.com/terms/c/crushspread.asp. Acesso em: 27 dez. 2023.
+
+CHEN, James. Crack Spread: What it is, How to Trade It. 2021. Disponível em: https://www.investopedia.com/terms/c/crackspread.asp. Acesso em: 26 dez. 2023.
+
+STEINER, Len. THE CATTLE CRUSH AND REVERSE CRUSH: an industry hedging tool and a financial investment opportunity. An Industry Hedging Tool And A Financial Investment Opportunity. Disponível em: https://www.cmegroup.com/education/files/the-cattle-crush-and-reverse-crush.pdf. Acesso em: 27 dez. 2023.
+
+MEFFORD, Eli; STUDENT, M.s.. All Correlations Go to 1 in a Crisis: The Cattle Crush Spread during COVID-19 Crisis. 2021. Disponível em: All Correlations Go to 1 in a Crisis: The Cattle Crush Spread during COVID-19 Crisis. Acesso em: 28 dez. 2023.
+
+CME GROUP. Soybean Crush Reference Guide. Disponível em: https://www.cmegroup.com/education/files/soybean-crush-reference-guide.pdf. Acesso em: 27 dez.
+
+CME Group. Introduction to Crack Spreads. 2017. Disponível em: https://www.cmegroup.com/education/articles-and-reports/introduction-to-crack-spreads.html. Acesso em: 02 jan. 2024.2023.
+
+PLOTLY. Plotly - Time Series Interactive Graphs. Disponível em: https://plotly.com/r/time-series/. Acesso em: 02 fev. 2024.
+
