@@ -191,7 +191,7 @@ ggplot() +
   theme_minimal()
 ```
 
-<img src="man/figures/README-example_points_out1-1.png" width="100%" />
+<img src="images/README-example_points_out1-1.png" width="100%" />
 
 In the example, we notice a problem where some points are found outside
 Campinas-SP. To identify these outside points, this function proves to
