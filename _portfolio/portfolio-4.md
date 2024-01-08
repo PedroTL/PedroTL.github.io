@@ -5,13 +5,13 @@ collection: portfolio
 ---
 <style>body {text-align: justify}</style>
 
-## Overview: RefineGeo Package
+## Overview
 
 I am excited to introduce the RefineGeo package, a powerful tool designed to streamline Geocoding processes and enhance location data analysis within R. Geocoding, the process of converting addresses into geographic coordinates, is fundamental in various domains, from spatial analytics to business intelligence.
 
 The RefineGeo package offers a comprehensive suite of functions aimed at refining address data, extracting meaningful location information, and enabling advanced Geocoding comparisons. Developed within the R environment, this package empowers users to effectively handle and analyze address data for precise location-based insights.
 
-## Key Features:
+## Key Features
 
 - **Address Cleaning:** With the `clean_address` function, the package cleans address strings, removes punctuations, accents, and duplicates, standardizing the format for consistent analysis.
 - **CEP Extraction:** The `extr_cep` function extracts CEP (Brazilian Zip Code) patterns from address strings, offering options to consider both 5 and 8-digit CEPs.
