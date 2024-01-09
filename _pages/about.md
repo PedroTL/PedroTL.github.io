@@ -8,6 +8,8 @@ redirect_from:
   - /about.html
 ---
 
+<style>body {text-align: justify}</style>
+
 ## About Me
 
 I have almost two years of hands-on experience as a research assistant at the Pontifical Catholic University of Campinas Observatory and as a teaching assistant in econometrics coursework. My first project focused on Productive Structure and Socioeconomic Development, conducting comprehensive studies on foreign trade and productive structure complexity within the Metropolitan Region of Campinas (MRC). The second, in collaboration with the FEAC foundation, involved conducting a Social Territory Diagnosis. This initiative entailed geocoding data obtained from the Single Registry (Cadastro Único), a federal program that registers families in social vulnerability. Both projects offered valuable insights for the industrial and third sectors, as well as playing a crucial role in the decision-making processes within the public sector.
@@ -24,10 +26,11 @@ I have almost two years of hands-on experience as a research assistant at the Po
 
 **Research Assistant @ Pontifical Catholic University of Campinas Observatory (_March 2023 - Present_)**
 
-- I worked on the design and methodology for geocoding over 70,000 families enrolled in the Federal Single Registry Program in Campinas using R, which efficiently selects the best coordinates based on unreliable addresses. This effort resulted in a better understanding of areas with social vulnerabilities through spatial visualization, offering valuable insights to policymakers and third-sector organizations.
-- Designed and implemented a reproducible workflow in R and RMarkdown for use with the Single Registry data. The primary goal was to clean and prepare the data, which consists of over 170 variables, making it easier for other municipalities to conduct better geocoding and regional studies on social vulnerability.
-- Collaborated with analysts from the FEAC Foundation to conduct a methodological study that encompasses the results and methods employed in the geocoding process of the Single Registry in Campinas.
-- Maintained a consistent workflow with continuous commits, code reviews, and data wrangling to extract insights requested by the leading researcher.
+
+- I was involved in developing the methodology to Geocode over 70,000 families enrolled in the Federal Program of the Unique Registry in Campinas. My responsibility included analyzing sensitive data comprising more than 170 variables using R. This initiative significantly enhanced our comprehension of areas with social vulnerabilities through spatial visualization, yielding valuable insights for policymakers and third-sector organizations.
+- I devised and implemented a replicable workflow in R specifically tailored for the Unique Registry data. This involved creating an R package ([RefineGeo](https://github.com/PedroTL/RefineGeo)) that streamlined the geocoding process used within the study. The primary objective was to cleanse and prepare the data, simplifying the process for other researchers to conduct more effective geocoding, particularly in regional studies focusing on social vulnerability.
+- Collaboratively, I worked alongside analysts at the FEAC Foundation to conduct a comprehensive methodological study covering the outcomes and techniques employed in the geocoding process of the Unique Registry in Campinas.
+- Consistently, I managed workflow activities encompassing commits, code reviews, and data manipulation to extract pertinent insights as requested by the lead researcher.
 
 
 **Teaching Assistant @ Pontifical Catholic University of Campinas (_February 2023 - Present_)**
@@ -65,8 +68,27 @@ Driven by my interest in GIS and spatial data analysis, I was one of the instruc
 
 Monthly Foreign Trade Report of the Metropolitan Region of Campinas (MRC), generated using an automated workflow in RMarkdown. This report contains vital data on exports and imports, including the trade balance, presented with both yearly and monthly comparisons. It elaborates on the complexity of exported and imported goods, making it a valuable tool for decision-makers in industrial and public sectors.
 
+### Instructor of the Academic Week workshop. 
+[Certificate](https://drive.google.com/file/d/1L3MPm8HDa4l9S6Ercza_izJzuLNSIsUG/view?usp=sharing)
 
-Instructors of the Academic Week workshop. The aim is to share the process of geocoding addresses and creating maps for various purposes using the R programming language.
+The aim is to share the process of geocoding addresses and map making for various purposes using the R programming language.
+
+### R Package RefineGeo
+[GitHub](https://github.com/PedroTL/RefineGeo)
+
+The RefineGeo package offers a comprehensive suite of functions aimed at refining address data, extracting meaningful location information, and enabling advanced Geocoding comparisons. 
+
+### Unveiling Commodity Futures’ Closing Prices: PCA Analysis Using Plotly
+[RPubs Post](https://rpubs.com/PedroT/commodity-futures-closing-prices-pca-plotly)
+
+In this analysis, I explore the intricate world of commodity futures trading and market relationships, shedding light on the underlying dynamics and correlations among different commodities.
+
+## Certificates
+
+- [Data Science With R DataCamp](https://www.datacamp.com/statement-of-accomplishment/track/f69f2360a7cd0cf98b5b9ccd1958a4cc87364a34): A 88h course that contemplates Data Science With R (11/2022)
+- [Data Analyst in SQL DataCamp](https://www.datacamp.com/statement-of-accomplishment/track/f69f2360a7cd0cf98b5b9ccd1958a4cc87364a34): A 39h course that contemplates Data Analysis With SQL (02/2023)
+- [Data Analyst in Power BI](https://drive.google.com/drive/search?hl=pt-br&q=certificate): A 48h that contemplates Data Analysis in Power BI (01/2024)
+- [CPA-10](https://drive.google.com/file/d/1MfT8-hTr-Z2gngmuGxUjMFFX2NLqX8p2/view): ANBIMA certificate about Brazilian Financial Market (10/2023)
 
 ## Talks & Lectures
 
