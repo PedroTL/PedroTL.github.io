@@ -12,39 +12,35 @@ redirect_from:
 
 ## About Me
 
-With two years of hands-on experience as a research assistant at the Pontifical Catholic University of Campinas Observatory and as a teaching assistant in econometrics coursework. My first project focused on Productive Structure and Socioeconomic Development, conducting comprehensive studies on foreign trade and productive structure complexity within the Metropolitan Region of Campinas (MRC). The second, in collaboration with the FEAC foundation, involved conducting a Social Territory Diagnosis. This initiative entailed geocoding data obtained from the Single Registry (Cadastro Único), a federal program that registers families in social vulnerability. Both projects offered valuable insights for the industrial and third sectors, as well as playing a crucial role in the decision-making processes within the public sector.
+With two years of hands-on experience as a research assistant at the Pontifical Catholic University of Campinas Observatory and as a teaching assistant in econometrics coursework. My first project focused on Productive Structure and Socioeconomic Development, conducting comprehensive studies on foreign trade and productive structure complexity within the Metropolitan Region of Campinas (MRC). The second, in collaboration with the FEAC foundation, involved conducting a Social Territory Diagnosis. This initiative entailed Geocoding data obtained from the Single Registry (Cadastro Único), a federal program that registers families in social vulnerability. Both projects offered valuable insights for the industrial and third sectors, as well as playing a crucial role in the decision-making processes within the public sector.
 
 
-#### Technical Skills: Statistics | Econometrics | Spatial Econometrics | Exploratory Spatial Data Analysis (ESDA) | Regional Economics | Development Economics Research | Scientific Writing | GIS Fundamentals | R Language | SQL | Data Analysis | Fluent Portuguese and Advanced English
+#### Technical Skills: Statistics | Econometrics | Spatial Econometrics | Exploratory Spatial Data Analysis (ESDA) | Regional Economics | Development Economics Research | Scientific Writing | Black-Schoels | Monte Carlo | Commodities | OTC | GIS Fundamentals | R | SQL | Python | Data Analysis | Fluent Portuguese and Advanced English
 
 ## Education
 
 - Pontifical Catholic University of Campinas (_December 2023_)
-- [Thesis](https://pedrotl.github.io/portfolio/portfolio-2/): DETERMINANTS OF CRIME IN BRAZILIAN SOUTHEAST: APPLICATION OF SPATIAL ECONOMETRIC TECHNIQUES
+- [Thesis](https://pedrotl.github.io/portfolio/portfolio-2/): DETERMINANTS OF CRIME IN BRAZILIAN SOUTHEAST: APPLICATION OF SPATIAL ECONOMETRIC TECHNIQUES | **Grade: 10**
 
 ## Work Experience
 
-**Research Assistant @ Pontifical Catholic University of Campinas Observatory (_March 2023 - Present_)**
+**Research Assistant @ Pontifical Catholic University of Campinas Observatory (_March 2023 - February 2024_)**
 
+I worked on building the methodology that Geocoded more than 70 thousand families from the Single Registry of Campinas, SP and helped built the Index of Intramunicipality Social Vulnerability - (IVSIM), in partnership with the FEAC Foundation, a Third Sector Organization, using R and Python language. The result brought a better understanding of regions with social vulnerability using spatial data analysis, providing information for public policy makers and the third sector organizations.
 
-- I was involved in developing the methodology to Geocode over 70,000 families enrolled in the Federal Program of the Unique Registry in Campinas. My responsibility included analyzing sensitive data comprising more than 170 variables using R. This initiative significantly enhanced our comprehension of areas with social vulnerabilities through spatial visualization, yielding valuable insights for policymakers and third-sector organizations.
-- I devised and implemented a replicable workflow in R specifically tailored for the Unique Registry data. This involved creating an R package ([RefineGeo](https://github.com/PedroTL/RefineGeo)) that streamlined the geocoding process used within the study. The primary objective was to cleanse and prepare the data, simplifying the process for other researchers to conduct more effective geocoding, particularly in regional studies focusing on social vulnerability.
-- Collaboratively, I worked alongside analysts at the FEAC Foundation to conduct a comprehensive methodological study covering the outcomes and techniques employed in the geocoding process of the Unique Registry in Campinas.
-- Consistently, I managed workflow activities encompassing commits, code reviews, and data manipulation to extract pertinent insights as requested by the lead researcher.
+- Analyzed more than 170 sensitive socioeconomic variables from administrative records, collaborating in the construction of IVSIM, which allowed the ranking of Single Registry families by level of vulnerability.
+- Built a package in R ([RefineGeo](https://github.com/PedroTL/RefineGeo)) that includes the Geocoding methodology. Performing cleaning, standardizing addresses and choosing coordinates, making the process easier for other researchers.
+- Collaborated with a FEAC analyst to produce a methodological note that encompasses the process and results of Geocoding, in addition to reviewing codes and creating technical reports, meeting ad hoc demands from researchers.
 
+**Teaching Assistant @ Pontifical Catholic University of Campinas (_February 2023 - Dezember 2023_)**
 
-**Teaching Assistant @ Pontifical Catholic University of Campinas (_February 2023 - Present_)**
-
-- Developed instructional YouTube tutorials to help students grasp course content and provided support with the R language.
-- Design exercises, quizzes, and answer keys for students while being responsible for grading assignments.
-- Conduct continuous online tutoring sections during the semester to assist students with course-related topics.
+- Provided support to four classes in the subjects of Econometrics, Econometrics Laboratory II and Accounting. I elaborated tutorials on the subject and the R language, created a list of exercises, answer keys and conducted corrections on tasks, tests and final exams.
 
 **Research Assistant @ Pontifical Catholic University of Campinas Observatory (_February 2022 - December 2022_)**
 
-- Responsible for collecting, extracting, and validating data from international trade for the Metropolitan Region of Campinas in the R language.
-- Developed an automated RMarkdown workflow for running monthly reports on the International Trade of the Metropolitan Region of Campinas (MRC), reducing the time required for releasing information to local media and public institutions.
-- Conducted methodological studies involving statistical and economic analysis on topics with regional significance, aiming to provide better insights and understanding to policymakers, third-sector organizations, and the industry sector.
-- Collaborated on data wrangling tasks, addressing specific requests from other research professors. 
+I worked on preparing technical and informative reports on foreign trade in the Metropolitan Region of Campinas.
+- Performed ETL process for foreign trade data through COMEX STAT, analyzing information about 20 municipalities and developing an automated report in RMarkdown to generate the RMC Monthly Foreign Trade Newsletter, reducing publication time for local media and public entities.
+- Reviewed codes, prepared documentation and created methodological notes for topics of regional relevance. Furthermore, I met ad hoc demands from RMC researchers and city halls regarding foreign trade analysis.
 
 ## Projects
 
@@ -54,13 +50,17 @@ With two years of hands-on experience as a research assistant at the Pontifical 
 
 Developed in collaboration with FEAC foundation analysts and researchers from the Pontifical Catholic University of Campinas Observatory, a unique methodology was established to geocode over 70,000 families registered in the Cadastro Único in Campinas. This process served as the initial phase to construct a social vulnerability index for the municipality. The outcomes revealed areas with a dense concentration of program registrations, offering valuable insights about social economic vulnerability for third-sector organizations and policymakers.
 
-
 <img src="/images/1-Map-Geocoding.jpeg" alt="1-Map-Geocoding" />
 
-### Geocoding and Cartography for Socioeconomic Studies
+### R Package RefineGeo
+[GitHub](https://github.com/PedroTL/RefineGeo)
+
+The RefineGeo package offers a comprehensive suite of functions aimed at refining address data, extracting meaningful location information, and enabling advanced Geocoding comparisons. 
+
+### Instructor of Workshop - Geocoding and Cartography for Socioeconomic Studies
 [Workshop](https://drive.google.com/file/d/1L3MPm8HDa4l9S6Ercza_izJzuLNSIsUG/view?usp=sharing): 
 
-Driven by my interest in GIS and spatial data analysis, I was one of the instructors for a two-day workshop entailing the process of geocoding and map making in the R language.
+Driven by my interest in GIS and spatial data analysis, I was one of the instructors for a two-day workshop entailing the process of Geocoding and map making in the R language.
 
 ### Monthly Foreign Trade Report of the Metropolitan Region of Campinas (MRC)
 [Full Study](https://observatorio.puc-campinas.edu.br/informativo-mensal-balanca-comercial-da-regiao-metropolitana-de-campinas-volume-5-n-06-2022/)<br>
@@ -68,20 +68,15 @@ Driven by my interest in GIS and spatial data analysis, I was one of the instruc
 
 Monthly Foreign Trade Report of the Metropolitan Region of Campinas (MRC), generated using an automated workflow in RMarkdown. This report contains vital data on exports and imports, including the trade balance, presented with both yearly and monthly comparisons. It elaborates on the complexity of exported and imported goods, making it a valuable tool for decision-makers in industrial and public sectors.
 
-### Instructor of the Academic Week workshop. 
-[Certificate](https://drive.google.com/file/d/1L3MPm8HDa4l9S6Ercza_izJzuLNSIsUG/view?usp=sharing)
-
-The aim is to share the process of geocoding addresses and map making for various purposes using the R programming language.
-
-### R Package RefineGeo
-[GitHub](https://github.com/PedroTL/RefineGeo)
-
-The RefineGeo package offers a comprehensive suite of functions aimed at refining address data, extracting meaningful location information, and enabling advanced Geocoding comparisons. 
-
 ### Unveiling Commodity Futures’ Closing Prices: PCA Analysis Using Plotly
 [RPubs Post](https://rpubs.com/PedroT/commodity-futures-closing-prices-pca-plotly)
 
 In this analysis, I explore the intricate world of commodity futures trading and market relationships, shedding light on the underlying dynamics and correlations among different commodities.
+
+### Analysis of Medicine Purchases in the Health Price Database
+[RPubs Post](https://rpubs.com/PedroT/BancoPrecoSaudeAnalise)
+
+In this analysis, I explore the Federal Database of Medicine Purchases, allowing for a better understanding, by municipality, on the behavior of pharmacy products.
 
 ## Certificates
 
@@ -89,6 +84,8 @@ In this analysis, I explore the intricate world of commodity futures trading and
 - [Data Analyst in SQL DataCamp](https://www.datacamp.com/statement-of-accomplishment/track/f69f2360a7cd0cf98b5b9ccd1958a4cc87364a34): A 39h course that contemplates Data Analysis With SQL (02/2023)
 - [Data Analyst in Power BI](https://drive.google.com/drive/search?hl=pt-br&q=certificate): A 48h that contemplates Data Analysis in Power BI (01/2024)
 - [CPA-10](https://drive.google.com/file/d/1MfT8-hTr-Z2gngmuGxUjMFFX2NLqX8p2/view): ANBIMA certificate about Brazilian Financial Market (10/2023)
+- [Teaching Assistent Certificate](https://drive.google.com/file/d/1WWBbPsZcyp0LmZMnRSDtUfkQJ-EtJ6OW/view)
+- [Python Fundamentals](https://drive.google.com/file/d/1Ics7V8PuSCZAzwE4QHPOoW0NNSiF0IOO/view)
 
 ## Talks & Lectures
 
