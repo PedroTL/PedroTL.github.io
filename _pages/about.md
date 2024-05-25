@@ -84,8 +84,8 @@ In this analysis, I explore the Federal Database of Medicine Purchases, allowing
 - [Data Analyst in SQL DataCamp](https://www.datacamp.com/statement-of-accomplishment/track/f69f2360a7cd0cf98b5b9ccd1958a4cc87364a34): A 39h course that contemplates Data Analysis With SQL (02/2023)
 - [Data Analyst in Power BI](https://drive.google.com/drive/search?hl=pt-br&q=certificate): A 48h that contemplates Data Analysis in Power BI (01/2024)
 - [CPA-10](https://drive.google.com/file/d/1MfT8-hTr-Z2gngmuGxUjMFFX2NLqX8p2/view): ANBIMA certificate about Brazilian Financial Market (10/2023)
-- [Teaching Assistent Certificate](https://drive.google.com/file/d/1WWBbPsZcyp0LmZMnRSDtUfkQJ-EtJ6OW/view)
-- [Python Fundamentals](https://drive.google.com/file/d/1Ics7V8PuSCZAzwE4QHPOoW0NNSiF0IOO/view)
+- [Teaching Assistant Certificate](https://drive.google.com/file/d/1WWBbPsZcyp0LmZMnRSDtUfkQJ-EtJ6OW/view): Certificate of Teaching Assistant Classes During the Year of 2023 (02/2023 - 12/2023)
+- [Python Fundamentals](https://drive.google.com/file/d/1Ics7V8PuSCZAzwE4QHPOoW0NNSiF0IOO/view): A 15h course that contemplates the fundamentals of Python Programming Language (01/2024)
 
 ## Talks & Lectures
 
