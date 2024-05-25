@@ -101,3 +101,5 @@ In this analysis, I explore the Federal Database of Medicine Purchases, allowing
 ## Publications
 
 1. OLIVEIRA, P. R. S. ; ALONSO, R. ; **LUCAS, J. P. T. T.** ; MARTINS, W. . Geocodificação dos Endereços do CadÚnico de Campinas. 2023. [Methodological Study](https://observatorio.puc-campinas.edu.br/geocodificacao-dos-enderecos-do-cadunico-de-campinas/)
+
+2. OLIVEIRA, P. R. S.; ALONSO, R.; LUCAS, J. P. T. T.; MARTINS, W. Geocodificação dos Domicílios do Cad-Único. In: NOGUEIRA, A. B.; VALENTE, R. K. M.; PLÁCIDO, V. L. (org.). Impacto na Sociedade: Relatos da Extensão e Pesquisa na PUC-Campinas. 1. ed. Campinas: SPLENDED PUC-CAMPINAS, 2023. v. 1, cap. 2.6, p. 147-154. ISBN 978-65-89946-04-5. Disponível em: https://www.calameo.com/read/0028127050edbdd81263a. Acesso em: 25 maio 2024. 
