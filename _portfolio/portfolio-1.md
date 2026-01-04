@@ -5,7 +5,7 @@ collection: portfolio
 ---
 <style>body {text-align: justify}</style>
 
-## Overview
+### Overview
 
 The goal of this post is to present the main aspects of geocoding process of the families in the Single Registry of Campinas-SP, including the objectives, methodology, and results. The full version is available in Portuguese, and the content was adapted to a portfolio post structure, emphasizing the key points and bringing out the main results.
 
